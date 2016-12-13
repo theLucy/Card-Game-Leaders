@@ -17,6 +17,11 @@ Main()
             
 
             dalinimas(5);
+
+            pirmas.Deti_viena_korta(pirmas.Ranka[2], ant_stalo);
+            antras.Deti_viena_korta(pirmas.Ranka[2], ant_stalo);
+            trecias.Deti_viena_korta(pirmas.Ranka[2], ant_stalo);
+            ketvirtas.imti_viska(ant_stalo);
 }
   void dalinimas(int kiek_zaideju)
         {
