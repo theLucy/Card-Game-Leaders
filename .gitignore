@@ -1,0 +1,11 @@
+#Untracked user confs:
+*.suo
+*.user
+
+#Untracked Resharper confs(just in case):
+_ReSharper.*
+
+#Untracked bin files and such:
+bin/
+obj/
+packages/
