@@ -87,7 +87,7 @@
     <Compile Include="Zaidejas.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\12.bmp" />
+    <EmbeddedResource Include="Resources\12.bmp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\13.bmp" />

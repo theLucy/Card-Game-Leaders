@@ -45,6 +45,7 @@ namespace cardgame
             else
             {
                 //MessageBox.Show("nesvaik blt");
+                
             }
 
         }
