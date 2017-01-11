@@ -3,7 +3,7 @@
 
 public partial class MainWindow
 {
-    private global::Gtk.Fixed fixed1;
+    public global::Gtk.Fixed fixed1;
 
     private global::Gtk.Button button1;
 
@@ -55,9 +55,9 @@ public partial class MainWindow
         this.label3.Name = "label3";
         this.label3.LabelProp = global::Mono.Unix.Catalog.GetString("label3");
         this.fixed1.Add(this.label3);
-        global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.label3]));
-        w4.X = 431;
-        w4.Y = 396;
+        //global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.label3]));
+       // w4.X = 431;
+        //w4.Y = 396;
         // Container child fixed1.Gtk.Fixed+FixedChild
         this.label4 = new global::Gtk.Label();
         this.label4.Name = "label4";
@@ -77,4 +77,5 @@ public partial class MainWindow
         this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
         this.button1.Clicked += new global::System.EventHandler(this.OnButton1Clicked);
 	}
+
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cardgame
 {
-    class Zaidejas : Taisykles
+    public class Zaidejas : Taisykles
     {
         public Korta[] uzverstos = new Korta[3];
         public Korta[] atverstos = new Korta[3];
