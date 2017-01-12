@@ -1,12 +1,14 @@
-﻿<Properties StartupItem="cardgame.csproj">
+﻿<Properties StartupConfiguration="{68E477D2-55B5-4E3C-9D6A-0B1CF71D572C}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Korta.cs">
-    <Files>
-      <File FileName="Korta.cs" Line="11" Column="23" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.cardgame PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MainWindow.cs">
+    <Files>
+      <File FileName="gtk-gui\MainWindow.cs" Line="1" Column="1" />
+      <File FileName="MainWindow.cs" Line="65" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
 </Properties>

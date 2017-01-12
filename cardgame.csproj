@@ -90,157 +90,157 @@
     <EmbeddedResource Include="Resources\12.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\13.bmp" />
+    <EmbeddedResource Include="Resources\13.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\14.bmp" />
+    <EmbeddedResource Include="Resources\14.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\15.bmp" />
+    <EmbeddedResource Include="Resources\15.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\16.bmp" />
+    <EmbeddedResource Include="Resources\16.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\17.bmp" />
+    <EmbeddedResource Include="Resources\17.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\18.bmp" />
+    <EmbeddedResource Include="Resources\18.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\19.bmp" />
+    <EmbeddedResource Include="Resources\19.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\20.bmp" />
+    <EmbeddedResource Include="Resources\20.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\22.bmp" />
+    <EmbeddedResource Include="Resources\22.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\23.bmp" />
+    <EmbeddedResource Include="Resources\23.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\24.bmp" />
+    <EmbeddedResource Include="Resources\24.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\25.bmp" />
+    <EmbeddedResource Include="Resources\25.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\26.bmp" />
+    <EmbeddedResource Include="Resources\26.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\27.bmp" />
+    <EmbeddedResource Include="Resources\27.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\28.bmp" />
+    <EmbeddedResource Include="Resources\28.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\29.bmp" />
+    <EmbeddedResource Include="Resources\29.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\30.bmp" />
+    <EmbeddedResource Include="Resources\30.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\32.bmp" />
+    <EmbeddedResource Include="Resources\32.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\33.bmp" />
+    <EmbeddedResource Include="Resources\33.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\34.bmp" />
+    <EmbeddedResource Include="Resources\34.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\35.bmp" />
+    <EmbeddedResource Include="Resources\35.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\36.bmp" />
+    <EmbeddedResource Include="Resources\36.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\37.bmp" />
+    <EmbeddedResource Include="Resources\37.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\38.bmp" />
+    <EmbeddedResource Include="Resources\38.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\39.bmp" />
+    <EmbeddedResource Include="Resources\39.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\40.bmp" />
+    <EmbeddedResource Include="Resources\40.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\42.bmp" />
+    <EmbeddedResource Include="Resources\42.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\43.bmp" />
+    <EmbeddedResource Include="Resources\43.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\44.bmp" />
+    <EmbeddedResource Include="Resources\44.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\45.bmp" />
+    <EmbeddedResource Include="Resources\45.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\46.bmp" />
+    <EmbeddedResource Include="Resources\46.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\47.bmp" />
+    <EmbeddedResource Include="Resources\47.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\48.bmp" />
+    <EmbeddedResource Include="Resources\48.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\49.bmp" />
+    <EmbeddedResource Include="Resources\49.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\50.bmp" />
+    <EmbeddedResource Include="Resources\50.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\121.bmp" />
+    <EmbeddedResource Include="Resources\121.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\122.bmp" />
+    <EmbeddedResource Include="Resources\122.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\123.bmp" />
+    <EmbeddedResource Include="Resources\123.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\124.bmp" />
+    <EmbeddedResource Include="Resources\124.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\131.bmp" />
+    <EmbeddedResource Include="Resources\131.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\132.bmp" />
+    <EmbeddedResource Include="Resources\132.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\133.bmp" />
+    <EmbeddedResource Include="Resources\133.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\134.bmp" />
+    <EmbeddedResource Include="Resources\134.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\141.bmp" />
+    <EmbeddedResource Include="Resources\141.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\142.bmp" />
+    <EmbeddedResource Include="Resources\142.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\143.bmp" />
+    <EmbeddedResource Include="Resources\143.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\144.bmp" />
+    <EmbeddedResource Include="Resources\144.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\151.bmp" />
+    <EmbeddedResource Include="Resources\151.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\152.bmp" />
+    <EmbeddedResource Include="Resources\152.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\153.bmp" />
+    <EmbeddedResource Include="Resources\153.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\154.bmp" />
+    <EmbeddedResource Include="Resources\154.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

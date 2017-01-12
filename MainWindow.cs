@@ -64,18 +64,20 @@ public partial class MainWindow: Gtk.Window
 
 
 
-        //image1.Pixbuf = new Gdk.Pixbuf("C://Users//Rasa//Desktop//Resources//22.bmp");  
- 
+		//image1.Pixbuf = new Gdk.Pixbuf("C://Users//Rasa//Desktop//Resources//22.bmp");  
 
-       /* Gdk.Pixbuf s;
-        //image2.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame/k12.bmp");//nein niekaip uzdet image is resurso
-        object O = cardgame.Properties.Resources.ResourceManager.GetObject("chan1"); 
-        //channelPic.Image = (Image)O;
-        s = (Gdk.Pixbuf)O;
-        //image2.Pixbuf = new Gdk.Pixbuf();
-        
-        GetPointer(out x, out y); //kursoriaus pozicija
-        */
+
+		/* Gdk.Pixbuf s;
+		 //image2.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame/k12.bmp");//nein niekaip uzdet image is resurso
+		 object O = cardgame.Properties.Resources.ResourceManager.GetObject("chan1"); 
+		 //channelPic.Image = (Image)O;
+		 s = (Gdk.Pixbuf)O;
+		 //image2.Pixbuf = new Gdk.Pixbuf();
+
+		 GetPointer(out x, out y); //kursoriaus pozicija
+		 */
+
+		image2.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.42.bmp");
         w1.X = 400;
         w1.Y = 400;
         label3.Text = "butono location: " + w1.X.ToString() + " " + w1.Y.ToString();
