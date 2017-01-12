@@ -19,7 +19,7 @@ namespace cardgame
         {
             if (stalas.Zaidziamos.Count != 0)
             { 
-                if (Tikrina(ka, stalas.Zaidziamos.First()) == true) { stalas.Padejo(ka);Ranka.Remove(ka); };
+                if (Tikrina(ka, stalas.Zaidziamos.First())) { stalas.Padejo(ka);Ranka.Remove(ka); };
                 
             }
             else { stalas.Padejo(ka); Ranka.Remove(ka); }
