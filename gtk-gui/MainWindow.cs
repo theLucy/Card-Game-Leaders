@@ -5,15 +5,15 @@ public partial class MainWindow
 {
 	private global::Gtk.Fixed fixed1;
 
-	private global::Gtk.Button button1;
-
-	private global::Gtk.Label label3;
-
-	private global::Gtk.Label label4;
-
 	private global::Gtk.Image image1;
 
 	private global::Gtk.Image image2;
+
+	private global::Gtk.Button button1;
+
+	private global::Gtk.Label label4;
+
+	private global::Gtk.Label label3;
 
 	protected virtual void Build()
 	{
@@ -27,52 +27,52 @@ public partial class MainWindow
 		this.fixed1.Name = "fixed1";
 		this.fixed1.HasWindow = false;
 		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.image1 = new global::Gtk.Image();
+		this.image1.Name = "image1";
+		this.fixed1.Add(this.image1);
+		global::Gtk.Fixed.FixedChild w1 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.image1]));
+		w1.X = 406;
+		w1.Y = 92;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.image2 = new global::Gtk.Image();
+		this.image2.Name = "image2";
+		this.fixed1.Add(this.image2);
+		global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.image2]));
+		w2.X = 275;
+		w2.Y = 228;
+		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.button1 = new global::Gtk.Button();
 		this.button1.CanFocus = true;
 		this.button1.Name = "button1";
 		this.button1.UseUnderline = true;
-		this.button1.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
+		this.button1.Label = global::Mono.Unix.Catalog.GetString("Padeti korta");
 		this.fixed1.Add(this.button1);
-		global::Gtk.Fixed.FixedChild w1 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.button1]));
-		w1.X = 38;
-		w1.Y = 52;
-		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.label3 = new global::Gtk.Label();
-		this.label3.Name = "label3";
-		this.label3.LabelProp = global::Mono.Unix.Catalog.GetString("label3");
-		this.fixed1.Add(this.label3);
-		global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.label3]));
-		w2.X = 418;
-		w2.Y = 344;
+		global::Gtk.Fixed.FixedChild w3 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.button1]));
+		w3.X = 71;
+		w3.Y = 431;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.label4 = new global::Gtk.Label();
 		this.label4.Name = "label4";
 		this.label4.LabelProp = global::Mono.Unix.Catalog.GetString("label4");
 		this.fixed1.Add(this.label4);
-		global::Gtk.Fixed.FixedChild w3 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.label4]));
-		w3.X = 468;
-		w3.Y = 339;
+		global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.label4]));
+		w4.X = 783;
+		w4.Y = 453;
 		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.image1 = new global::Gtk.Image();
-		this.image1.Name = "image1";
-		this.fixed1.Add(this.image1);
-		global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.image1]));
-		w4.X = 406;
-		w4.Y = 92;
-		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.image2 = new global::Gtk.Image();
-		this.image2.Name = "image2";
-		this.fixed1.Add(this.image2);
-		global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.image2]));
-		w5.X = 275;
-		w5.Y = 228;
+		this.label3 = new global::Gtk.Label();
+		this.label3.Name = "label3";
+		this.label3.LabelProp = global::Mono.Unix.Catalog.GetString("label3");
+		this.fixed1.Add(this.label3);
+		global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.label3]));
+		w5.X = 557;
+		w5.Y = 457;
 		this.Add(this.fixed1);
 		if ((this.Child != null))
 		{
 			this.Child.ShowAll();
 		}
-		this.DefaultWidth = 667;
-		this.DefaultHeight = 444;
+		this.DefaultWidth = 905;
+		this.DefaultHeight = 539;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 		this.button1.Clicked += new global::System.EventHandler(this.OnButton1Clicked);
