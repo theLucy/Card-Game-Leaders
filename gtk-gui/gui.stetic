@@ -69,6 +69,497 @@
             <property name="Y">457</property>
           </packing>
         </child>
+        <child>
+          <widget class="Gtk.Image" id="image16">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">600</property>
+            <property name="Y">150</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image18">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">332</property>
+            <property name="Y">324</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image19">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">352</property>
+            <property name="Y">312</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image20">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">336</property>
+            <property name="Y">319</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image21">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">353</property>
+            <property name="Y">312</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image23">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">362</property>
+            <property name="Y">313</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image24">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">352</property>
+            <property name="Y">313</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image25">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">346</property>
+            <property name="Y">315</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image26">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">336</property>
+            <property name="Y">323</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image27">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">335</property>
+            <property name="Y">319</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image28">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">347</property>
+            <property name="Y">314</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image29">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">368</property>
+            <property name="Y">321</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image30">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">368</property>
+            <property name="Y">322</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image31">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">349</property>
+            <property name="Y">321</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image32">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">350</property>
+            <property name="Y">311</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image33">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">334</property>
+            <property name="Y">328</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image34">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">349</property>
+            <property name="Y">330</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image35">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">385</property>
+            <property name="Y">315</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image36">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">405</property>
+            <property name="Y">318</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image37">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">355</property>
+            <property name="Y">335</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image38">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">388</property>
+            <property name="Y">350</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image39">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">363</property>
+            <property name="Y">329</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image40">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">346</property>
+            <property name="Y">342</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image41">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">346</property>
+            <property name="Y">346</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image42">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">336</property>
+            <property name="Y">357</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image43">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">345</property>
+            <property name="Y">332</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image44">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">365</property>
+            <property name="Y">335</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image45">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">342</property>
+            <property name="Y">339</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image46">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">325</property>
+            <property name="Y">316</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image47">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">336</property>
+            <property name="Y">323</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image48">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">338</property>
+            <property name="Y">350</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image49">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">322</property>
+            <property name="Y">353</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image50">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">325</property>
+            <property name="Y">359</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image51">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">388</property>
+            <property name="Y">335</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image52">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">363</property>
+            <property name="Y">330</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image53">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">342</property>
+            <property name="Y">334</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image54">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">360</property>
+            <property name="Y">323</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image55">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">383</property>
+            <property name="Y">353</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image3">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">645</property>
+            <property name="Y">167</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image4">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">643</property>
+            <property name="Y">170</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image5">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">645</property>
+            <property name="Y">171</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image6">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">651</property>
+            <property name="Y">169</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image7">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">642</property>
+            <property name="Y">172</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image8">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">653</property>
+            <property name="Y">170</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image9">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">648</property>
+            <property name="Y">170</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image14">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">648</property>
+            <property name="Y">167</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image13">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">646</property>
+            <property name="Y">171</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image10">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">651</property>
+            <property name="Y">169</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image11">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">647</property>
+            <property name="Y">174</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image12">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">642</property>
+            <property name="Y">177</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image15">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">647</property>
+            <property name="Y">176</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image22">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">645</property>
+            <property name="Y">179</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="image17">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">394</property>
+            <property name="Y">345</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="button2">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Pradeti</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnButton2Clicked" />
+          </widget>
+          <packing>
+            <property name="X">166</property>
+            <property name="Y">430</property>
+          </packing>
+        </child>
       </widget>
     </child>
   </widget>

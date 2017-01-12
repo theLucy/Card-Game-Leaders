@@ -5,10 +5,11 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.cardgame PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Kalade.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MainWindow.cs">
     <Files>
-      <File FileName="MainWindow.cs" Line="29" Column="66" />
-      <File FileName="Kalade.cs" Line="35" Column="74" />
+      <File FileName="gtk-gui\MainWindow.cs" Line="1" Column="1" />
+      <File FileName="MainWindow.cs" Line="195" Column="85" />
+      <File FileName="Stalas.cs" Line="18" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>
