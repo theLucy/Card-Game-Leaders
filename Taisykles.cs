@@ -14,9 +14,8 @@ namespace cardgame
         }
         public bool Tikrina(Korta dedu, Korta ant)
         {
-            if ((dedu.verte == 2) || (dedu.verte == 10) || (dedu.verte >= dedu.verte)) { return true; }
-            else if ((dedu.verte <= dedu.verte) && (ant.verte == 2)) { return true; }
-            else {  return false; }
+            if ((dedu.verte == 2) || (dedu.verte == 10) || (dedu.verte >= ant.verte)) { return true; }
+            else { return false; }
         }
        
     }
