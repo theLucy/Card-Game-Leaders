@@ -23,10 +23,6 @@ namespace cardgame
             {
 				if (i < 10)
 				{
-					/*p.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.4" + i + ".bmp");
-					k.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.3" + i + ".bmp");
-					b.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.2" + i + ".bmp");
-					s.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.1" + i + ".bmp");*/
 					Kortos.Add(new Korta(KortosTipas.Pikai, i, "4"+i.ToString()));
 					Kortos.Add(new Korta(KortosTipas.Kryziai, i, "3" + i.ToString()));
 					Kortos.Add(new Korta(KortosTipas.Bugnai, i, "2" + i.ToString()));
@@ -35,10 +31,6 @@ namespace cardgame
 				}
 				else if (i==10)
 				{
-					/*p.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.50.bmp");
-					k.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.40.bmp");
-					b.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.30.bmp");
-					s.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.20.bmp");*/
 					Kortos.Add(new Korta(KortosTipas.Pikai, i, "50"));
 					Kortos.Add(new Korta(KortosTipas.Kryziai, i, "40"));
 					Kortos.Add(new Korta(KortosTipas.Bugnai, i, "30"));
@@ -46,19 +38,11 @@ namespace cardgame
 				}
 				else
 				{
-					/*p.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.15" + (i-10) + ".bmp");
-					k.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.14" + (i-10) + ".bmp");
-					b.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.13" + (i-10) + ".bmp");
-					s.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.12" + (i-10) + ".bmp");*/
 					Kortos.Add(new Korta(KortosTipas.Pikai, i, "15" + (i-10).ToString()));
 					Kortos.Add(new Korta(KortosTipas.Kryziai, i, "14" + (i - 10).ToString()));
 					Kortos.Add(new Korta(KortosTipas.Bugnai, i, "13" + (i - 10).ToString()));
 					Kortos.Add(new Korta(KortosTipas.Sirdys, i, "12" + (i - 10).ToString()));
 				}
-                /*Kortos.Add(new Korta(KortosTipas.Pikai, i,p));
-                Kortos.Add(new Korta(KortosTipas.Kryziai, i,k));
-                Kortos.Add(new Korta(KortosTipas.Bugnai, i,b));
-                Kortos.Add(new Korta(KortosTipas.Sirdys, i,s));*/
                 //2-10 skaiciai, J-11, Q-12, K-13, A-14
             }
         }
