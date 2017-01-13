@@ -39,8 +39,8 @@ namespace cardgame
         {
             if ((Ranka.Count() == 0) && (kalade.Kortos.Count() == 0))
             {
-                Ranka.AddRange(uzverstos);
-                uzverstos = null;
+                Ranka.AddRange(atverstos);
+                atverstos = null;
             }
             else
             {

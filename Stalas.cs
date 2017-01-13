@@ -10,6 +10,7 @@ namespace cardgame
     public class Stalas : Taisykles
     {
         public List<Korta> Zaidziamos = new List<Korta>();
+
         public Stalas()
         {
             

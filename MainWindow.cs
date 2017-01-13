@@ -11,7 +11,7 @@ public partial class MainWindow: Gtk.Window
 {
     
     Gtk.Fixed.FixedChild w1;
-	int kuri = 1;
+	int kuri = 0, kieno_eile = 1, kur_detix = 200, kur_detiy = 200, einama; //einama - tai ta kuri pasirinkta, bet nepadeta
     cardgame.Kalade Kalade = new cardgame.Kalade();
     cardgame.Zaidejas pirmas = new cardgame.Zaidejas();
     cardgame.Zaidejas antras = new cardgame.Zaidejas();
@@ -29,6 +29,8 @@ public partial class MainWindow: Gtk.Window
 	{
         //vietoj konteineriu uzmeciau fixed grida, kad butu galima su pixeliais dirbt;
 		Build ();
+		KeyPressEvent += KeyPress;
+
 		priskiria_img();
 		w1 = ((Gtk.Fixed.FixedChild)(this.fixed1[this.button1]));
 
@@ -47,6 +49,7 @@ public partial class MainWindow: Gtk.Window
 	}
 	void priskiria_img()
 	{
+		
 		
 		imgs[1] = image1;
 		imgs[2] = image2;
@@ -163,6 +166,7 @@ public partial class MainWindow: Gtk.Window
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
 	{
+		KeyPressEvent -= KeyPress;
 		Application.Quit ();
 		a.RetVal = true;
 	}
@@ -249,5 +253,64 @@ public partial class MainWindow: Gtk.Window
 		imgs[15].Pixbuf = pirmas.Ranka[2].pav.Pixbuf;
 		imgsch[15].X = 300;
 		imgsch[15].Y = 320;
+	}
+	void sulygina(int kurio)
+	{
+		if (kurio == 1)
+		{
+			for (int i = 1; i < 55; i++)
+			{
+				for (int j = 0; j < pirmas.Ranka.Count; j++)
+				{
+					if ((imgs[i].Pixbuf == pirmas.Ranka[j].pav.Pixbuf)&&(imgsch[i].Y!=320))
+					{
+						imgsch[i].Y += 20; break;
+					}
+				}
+
+			}
+		}
+	}
+	[GLib.ConnectBefore]
+	protected void KeyPress(object sender, KeyPressEventArgs args)
+	{
+		
+		//Console.WriteLine(args.Event.Key);
+		if (kieno_eile == 1)
+		{
+			
+			if (args.Event.Key == Gdk.Key.Right)
+			{
+				sulygina(1);
+				if (kuri <= pirmas.Ranka.Count)
+				{
+					kuri++;
+					for (int i = 1; i < 55; i++)
+					{
+						if (imgs[i].Pixbuf == pirmas.Ranka[kuri].pav.Pixbuf)
+						{
+							imgsch[i].Y -= 20; einama = i; break;
+						}
+					}
+				}
+			}
+			else if (args.Event.Key == Gdk.Key.Left)
+			{
+				sulygina(1);
+				if (kuri > 0)
+				{
+					kuri--;
+					for (int i = 1; i < 55; i++)
+					{
+						if (imgs[i].Pixbuf == pirmas.Ranka[kuri].pav.Pixbuf) { imgsch[i].Y -= 20; einama = i; break; }
+					}
+				}
+			}
+			else if (args.Event.Key == Gdk.Key.Up)
+			{
+				imgsch[einama].X = kur_detix;
+				imgsch[einama].Y = kur_detiy;
+			}
+		}
 	}
 }
