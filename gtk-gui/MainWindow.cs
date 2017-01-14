@@ -115,12 +115,6 @@ public partial class MainWindow
 
 	private global::Gtk.Image antr5;
 
-	private global::Gtk.Image antr6;
-
-	private global::Gtk.Image antr7;
-
-	private global::Gtk.Image antr8;
-
 	private global::Gtk.Image zaidziamos;
 
 	private global::Gtk.Image pir9;
@@ -146,6 +140,26 @@ public partial class MainWindow
 	private global::Gtk.Image GUIkalade;
 
 	private global::Gtk.Label label1;
+
+	private global::Gtk.Image antr6;
+
+	private global::Gtk.Image antr13;
+
+	private global::Gtk.Image antr14;
+
+	private global::Gtk.Image antr15;
+
+	private global::Gtk.Image antr7;
+
+	private global::Gtk.Image antr8;
+
+	private global::Gtk.Image antr9;
+
+	private global::Gtk.Image antr10;
+
+	private global::Gtk.Image antr11;
+
+	private global::Gtk.Image antr12;
 
 	protected virtual void Build()
 	{
@@ -486,14 +500,14 @@ public partial class MainWindow
 		this.antrouzv2.Name = "antrouzv2";
 		this.fixed1.Add(this.antrouzv2);
 		global::Gtk.Fixed.FixedChild w46 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antrouzv2]));
-		w46.X = 480;
+		w46.X = 475;
 		w46.Y = 283;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.antrouzv3 = new global::Gtk.Image();
 		this.antrouzv3.Name = "antrouzv3";
 		this.fixed1.Add(this.antrouzv3);
 		global::Gtk.Fixed.FixedChild w47 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antrouzv3]));
-		w47.X = 484;
+		w47.X = 475;
 		w47.Y = 216;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.antroatv3 = new global::Gtk.Image();
@@ -521,120 +535,99 @@ public partial class MainWindow
 		this.antr1.Name = "antr1";
 		this.fixed1.Add(this.antr1);
 		global::Gtk.Fixed.FixedChild w51 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr1]));
-		w51.X = 554;
+		w51.X = 570;
 		w51.Y = 403;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.antr2 = new global::Gtk.Image();
 		this.antr2.Name = "antr2";
 		this.fixed1.Add(this.antr2);
 		global::Gtk.Fixed.FixedChild w52 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr2]));
-		w52.X = 556;
+		w52.X = 570;
 		w52.Y = 344;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.antr3 = new global::Gtk.Image();
 		this.antr3.Name = "antr3";
 		this.fixed1.Add(this.antr3);
 		global::Gtk.Fixed.FixedChild w53 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr3]));
-		w53.X = 560;
+		w53.X = 570;
 		w53.Y = 281;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.antr4 = new global::Gtk.Image();
 		this.antr4.Name = "antr4";
 		this.fixed1.Add(this.antr4);
 		global::Gtk.Fixed.FixedChild w54 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr4]));
-		w54.X = 571;
+		w54.X = 570;
 		w54.Y = 214;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.antr5 = new global::Gtk.Image();
 		this.antr5.Name = "antr5";
 		this.fixed1.Add(this.antr5);
 		global::Gtk.Fixed.FixedChild w55 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr5]));
-		w55.X = 577;
+		w55.X = 570;
 		w55.Y = 158;
-		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.antr6 = new global::Gtk.Image();
-		this.antr6.Name = "antr6";
-		this.fixed1.Add(this.antr6);
-		global::Gtk.Fixed.FixedChild w56 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr6]));
-		w56.X = 623;
-		w56.Y = 405;
-		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.antr7 = new global::Gtk.Image();
-		this.antr7.Name = "antr7";
-		this.fixed1.Add(this.antr7);
-		global::Gtk.Fixed.FixedChild w57 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr7]));
-		w57.X = 633;
-		w57.Y = 335;
-		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.antr8 = new global::Gtk.Image();
-		this.antr8.Name = "antr8";
-		this.fixed1.Add(this.antr8);
-		global::Gtk.Fixed.FixedChild w58 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr8]));
-		w58.X = 640;
-		w58.Y = 251;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.zaidziamos = new global::Gtk.Image();
 		this.zaidziamos.Name = "zaidziamos";
 		this.fixed1.Add(this.zaidziamos);
-		global::Gtk.Fixed.FixedChild w59 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.zaidziamos]));
-		w59.X = 297;
-		w59.Y = 270;
+		global::Gtk.Fixed.FixedChild w56 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.zaidziamos]));
+		w56.X = 297;
+		w56.Y = 270;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.pir9 = new global::Gtk.Image();
 		this.pir9.Name = "pir9";
 		this.fixed1.Add(this.pir9);
-		global::Gtk.Fixed.FixedChild w60 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir9]));
-		w60.X = 243;
-		w60.Y = 597;
+		global::Gtk.Fixed.FixedChild w57 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir9]));
+		w57.X = 243;
+		w57.Y = 600;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.pir10 = new global::Gtk.Image();
 		this.pir10.Name = "pir10";
 		this.fixed1.Add(this.pir10);
-		global::Gtk.Fixed.FixedChild w61 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir10]));
-		w61.X = 297;
-		w61.Y = 590;
+		global::Gtk.Fixed.FixedChild w58 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir10]));
+		w58.X = 297;
+		w58.Y = 600;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.pir11 = new global::Gtk.Image();
 		this.pir11.Name = "pir11";
 		this.fixed1.Add(this.pir11);
-		global::Gtk.Fixed.FixedChild w62 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir11]));
-		w62.X = 353;
-		w62.Y = 594;
+		global::Gtk.Fixed.FixedChild w59 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir11]));
+		w59.X = 353;
+		w59.Y = 600;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.pir12 = new global::Gtk.Image();
 		this.pir12.Name = "pir12";
 		this.fixed1.Add(this.pir12);
-		global::Gtk.Fixed.FixedChild w63 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir12]));
-		w63.X = 414;
-		w63.Y = 593;
+		global::Gtk.Fixed.FixedChild w60 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir12]));
+		w60.X = 414;
+		w60.Y = 600;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.pir13 = new global::Gtk.Image();
 		this.pir13.Name = "pir13";
 		this.fixed1.Add(this.pir13);
-		global::Gtk.Fixed.FixedChild w64 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir13]));
-		w64.X = 476;
-		w64.Y = 592;
+		global::Gtk.Fixed.FixedChild w61 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir13]));
+		w61.X = 476;
+		w61.Y = 600;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.pir14 = new global::Gtk.Image();
 		this.pir14.Name = "pir14";
 		this.fixed1.Add(this.pir14);
-		global::Gtk.Fixed.FixedChild w65 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir14]));
-		w65.X = 541;
-		w65.Y = 585;
+		global::Gtk.Fixed.FixedChild w62 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir14]));
+		w62.X = 541;
+		w62.Y = 600;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.pir15 = new global::Gtk.Image();
 		this.pir15.Name = "pir15";
 		this.fixed1.Add(this.pir15);
-		global::Gtk.Fixed.FixedChild w66 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir15]));
-		w66.X = 614;
-		w66.Y = 596;
+		global::Gtk.Fixed.FixedChild w63 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir15]));
+		w63.X = 614;
+		w63.Y = 600;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.pir16 = new global::Gtk.Image();
 		this.pir16.Name = "pir16";
 		this.fixed1.Add(this.pir16);
-		global::Gtk.Fixed.FixedChild w67 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir16]));
-		w67.X = 703;
-		w67.Y = 598;
+		global::Gtk.Fixed.FixedChild w64 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir16]));
+		w64.X = 703;
+		w64.Y = 600;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.imti_3 = new global::Gtk.Button();
 		this.imti_3.CanFocus = true;
@@ -642,9 +635,9 @@ public partial class MainWindow
 		this.imti_3.UseUnderline = true;
 		this.imti_3.Label = global::Mono.Unix.Catalog.GetString("Imti 3");
 		this.fixed1.Add(this.imti_3);
-		global::Gtk.Fixed.FixedChild w68 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.imti_3]));
-		w68.X = 377;
-		w68.Y = 308;
+		global::Gtk.Fixed.FixedChild w65 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.imti_3]));
+		w65.X = 377;
+		w65.Y = 308;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.Imti_viska = new global::Gtk.Button();
 		this.Imti_viska.CanFocus = true;
@@ -652,25 +645,95 @@ public partial class MainWindow
 		this.Imti_viska.UseUnderline = true;
 		this.Imti_viska.Label = global::Mono.Unix.Catalog.GetString("Imti viska");
 		this.fixed1.Add(this.Imti_viska);
-		global::Gtk.Fixed.FixedChild w69 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.Imti_viska]));
-		w69.X = 351;
-		w69.Y = 352;
+		global::Gtk.Fixed.FixedChild w66 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.Imti_viska]));
+		w66.X = 351;
+		w66.Y = 352;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.GUIkalade = new global::Gtk.Image();
 		this.GUIkalade.Name = "GUIkalade";
 		this.fixed1.Add(this.GUIkalade);
-		global::Gtk.Fixed.FixedChild w70 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.GUIkalade]));
-		w70.X = 418;
-		w70.Y = 254;
+		global::Gtk.Fixed.FixedChild w67 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.GUIkalade]));
+		w67.X = 418;
+		w67.Y = 254;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.label1 = new global::Gtk.Label();
 		this.label1.Name = "label1";
 		this.label1.LabelProp = global::Mono.Unix.Catalog.GetString("Valdymas: vaiksciojimas per kortas rodykles i sonus, padet korta rodykle i virsu," +
 				" paimt uzversta i apacia");
 		this.fixed1.Add(this.label1);
-		global::Gtk.Fixed.FixedChild w71 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.label1]));
-		w71.X = 53;
-		w71.Y = 8;
+		global::Gtk.Fixed.FixedChild w68 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.label1]));
+		w68.X = 53;
+		w68.Y = 8;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.antr6 = new global::Gtk.Image();
+		this.antr6.Name = "antr6";
+		this.fixed1.Add(this.antr6);
+		global::Gtk.Fixed.FixedChild w69 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr6]));
+		w69.X = 570;
+		w69.Y = 103;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.antr13 = new global::Gtk.Image();
+		this.antr13.Name = "antr13";
+		this.fixed1.Add(this.antr13);
+		global::Gtk.Fixed.FixedChild w70 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr13]));
+		w70.X = 686;
+		w70.Y = 352;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.antr14 = new global::Gtk.Image();
+		this.antr14.Name = "antr14";
+		this.fixed1.Add(this.antr14);
+		global::Gtk.Fixed.FixedChild w71 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr14]));
+		w71.X = 692;
+		w71.Y = 285;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.antr15 = new global::Gtk.Image();
+		this.antr15.Name = "antr15";
+		this.fixed1.Add(this.antr15);
+		global::Gtk.Fixed.FixedChild w72 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr15]));
+		w72.X = 695;
+		w72.Y = 228;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.antr7 = new global::Gtk.Image();
+		this.antr7.Name = "antr7";
+		this.fixed1.Add(this.antr7);
+		global::Gtk.Fixed.FixedChild w73 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr7]));
+		w73.X = 630;
+		w73.Y = 403;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.antr8 = new global::Gtk.Image();
+		this.antr8.Name = "antr8";
+		this.fixed1.Add(this.antr8);
+		global::Gtk.Fixed.FixedChild w74 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr8]));
+		w74.X = 631;
+		w74.Y = 341;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.antr9 = new global::Gtk.Image();
+		this.antr9.Name = "antr9";
+		this.fixed1.Add(this.antr9);
+		global::Gtk.Fixed.FixedChild w75 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr9]));
+		w75.X = 629;
+		w75.Y = 283;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.antr10 = new global::Gtk.Image();
+		this.antr10.Name = "antr10";
+		this.fixed1.Add(this.antr10);
+		global::Gtk.Fixed.FixedChild w76 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr10]));
+		w76.X = 625;
+		w76.Y = 223;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.antr11 = new global::Gtk.Image();
+		this.antr11.Name = "antr11";
+		this.fixed1.Add(this.antr11);
+		global::Gtk.Fixed.FixedChild w77 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr11]));
+		w77.X = 629;
+		w77.Y = 163;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.antr12 = new global::Gtk.Image();
+		this.antr12.Name = "antr12";
+		this.fixed1.Add(this.antr12);
+		global::Gtk.Fixed.FixedChild w78 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.antr12]));
+		w78.X = 627;
+		w78.Y = 106;
 		this.Add(this.fixed1);
 		if ((this.Child != null))
 		{

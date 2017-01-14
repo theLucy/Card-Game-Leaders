@@ -11,7 +11,7 @@ public partial class MainWindow: Gtk.Window
 {
     
     Gtk.Fixed.FixedChild w1;
-	int kuri = 0, kieno_eile = 1, einama; //einama - tai ta kuri pasirinkta, bet nepadeta
+	int kuri = 0, kieno_eile = 1, einama,pries,po; //einama - tai ta kuri pasirinkta, bet nepadeta
 	bool[] zaidzia_uzverstom = new bool[5];
     cardgame.Kalade Kalade = new cardgame.Kalade();
     cardgame.Zaidejas pirmas = new cardgame.Zaidejas();
@@ -24,7 +24,7 @@ public partial class MainWindow: Gtk.Window
 
 	//Gtk.Fixed.FixedChild ws = ((Gtk.Fixed.FixedChild)(fixed1[image24]));
 	Gtk.Image[] pir = new Gtk.Image[15];
-	Gtk.Image[] antr = new Gtk.Image[7];
+	Gtk.Image[] antr = new Gtk.Image[15];
 	Gtk.Image[] trec = new Gtk.Image[7];
 	Gtk.Image[] ketv = new Gtk.Image[7];
 	Gtk.Fixed.FixedChild[] imgsch = new Gtk.Fixed.FixedChild[56];
@@ -81,6 +81,14 @@ public partial class MainWindow: Gtk.Window
 		antr[4] = antr5;
 		antr[5] = antr6;
 		antr[6] = antr7;
+		antr[7] = antr8;
+		antr[8] = antr9;
+		antr[9] = antr10;
+		antr[10] = antr11;
+		antr[11] = antr12;
+		antr[12] = antr13;
+		antr[13] = antr14;
+		antr[14] = antr15;
 
 		trec[0] = trec1;
 		trec[1] = trec2;
@@ -182,6 +190,10 @@ public partial class MainWindow: Gtk.Window
 			{
 				if (((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y != 515)
 				{
+					((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y += 20; 
+				}
+				else if ((((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y != 600) && (i > 8))  //cia gryba pjaun
+				{
 					((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y += 20;
 				}
 			}
@@ -194,6 +206,24 @@ public partial class MainWindow: Gtk.Window
 			}
 					
 		}
+		/*else if (kurio == 2)
+		{
+			for (int i = 0; i < antras.Ranka.Count; i++)
+			{
+				if (((Gtk.Fixed.FixedChild)(fixed1[antr[i]])).X != 570)
+				{
+					((Gtk.Fixed.FixedChild)(fixed1[antr[i]])).X += 20;
+				}
+			}
+			if (zaidzia_uzverstom[kurio] == true)
+			{
+				if (((Gtk.Fixed.FixedChild)(fixed1[antrouzv1])).X != 475) { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv1])).X += 20; }
+				if (((Gtk.Fixed.FixedChild)(fixed1[antrouzv2])).X != 475) { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv2])).X += 20; }
+				if (((Gtk.Fixed.FixedChild)(fixed1[antrouzv3])).X != 475) { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv3])).X += 20; }
+
+			}
+
+		}*/
 	}
 	void refresh(int kurio)
 	{
@@ -223,6 +253,28 @@ public partial class MainWindow: Gtk.Window
 				pir[i].Pixbuf = null;
 			}
 		}
+		/*else if (kurio == 2)
+		{
+			if (antras.atverstos == null)
+			{
+				antroatv1.Pixbuf = null;
+				antroatv2.Pixbuf = null;
+				antroatv3.Pixbuf = null;
+			}
+			if (antras.uzverstos[0] == null) { antrouzv1.Pixbuf = null; }
+			if (antras.uzverstos[1] == null) { antrouzv2.Pixbuf = null; }
+			if (antras.uzverstos[2] == null) { antrouzv3.Pixbuf = null; }
+			for (int i = 0; i < antras.Ranka.Count; i++)
+			{
+				antr[i].Pixbuf = antras.Ranka[i].pav.Pixbuf;
+
+			}
+			for (int i = antras.Ranka.Count; i < 15; i++)
+			{
+				antr[i].Pixbuf = null;
+			}
+		}*/
+
 
 	}
 	[GLib.ConnectBefore]
@@ -274,30 +326,99 @@ public partial class MainWindow: Gtk.Window
 			}
 			else if (args.Event.Key == Gdk.Key.Down)
 			{
-				MessageDialog md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "l");
-				md.Run();
-				md.Destroy();
+				
 				if (zaidzia_uzverstom[kieno_eile] == true)
 				{
 					pirmas.paimti_uzversta(einama); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
+					zaidzia_uzverstom[kieno_eile] = false;
 				}
 				refresh(kieno_eile);
 			}
 			else if (args.Event.Key == Gdk.Key.Up)
 			{
+				pries = ant_stalo.Zaidziamos.Count;
 				pirmas.Deti_viena_korta(pirmas.Ranka[einama],ant_stalo,Kalade);
+				po = ant_stalo.Zaidziamos.Count;
+
 				pirmas.paimti_atverstas(Kalade); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
-				/*if (zaidzia_uzverstom[kieno_eile] == true)
-				{
-					pirmas.paimti_uzversta(kuri); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
-				}*/
+
 				if ((pirmas.atverstos == null) && (pirmas.Ranka.Count== 0))
 				{
 					zaidzia_uzverstom[kieno_eile] = true;
 				}
 				refresh(kieno_eile);
+				//if (pries != po) { kuri = 1; kieno_eile++;}
+
 			}
 		}
+		/*else if (kieno_eile == 2)
+		{
+
+			if (args.Event.Key == Gdk.Key.Up)
+			{
+
+				if ((kuri < antras.Ranka.Count - 1) || (zaidzia_uzverstom[kieno_eile] == true))
+				{
+					sulygina(2);
+					kuri++;
+					if (zaidzia_uzverstom[kieno_eile] == true)
+					{
+						if (kuri == 0) { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv1])).X -= 20; }
+						else if (kuri == 1) { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv2])).X -= 20; }
+						else { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv3])).X -= 20; }
+
+					}
+					else { ((Gtk.Fixed.FixedChild)(fixed1[antr[kuri]])).X -= 20; }
+					einama = kuri;
+
+				}
+			}
+			else if (args.Event.Key == Gdk.Key.Down)
+			{
+
+
+				if ((kuri > 0) || (zaidzia_uzverstom[kieno_eile] == true))
+				{
+					sulygina(2);
+					kuri--;
+					if (zaidzia_uzverstom[kieno_eile] == true)
+					{
+						if (kuri == 0) { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv1])).X -= 20; }
+						else if (kuri == 1) { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv2])).X -= 20; }
+						else { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv3])).X -= 20; }
+
+					}
+					else { ((Gtk.Fixed.FixedChild)(fixed1[antr[kuri]])).X -= 20; }
+					einama = kuri;
+				}
+			}
+			else if (args.Event.Key == Gdk.Key.Right)
+			{
+
+				if (zaidzia_uzverstom[kieno_eile] == true)
+				{
+					antras.paimti_uzversta(einama); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
+					zaidzia_uzverstom[kieno_eile] = false;
+				}
+				refresh(kieno_eile);
+			}
+			else if (args.Event.Key == Gdk.Key.Left)
+			{
+				pries = ant_stalo.Zaidziamos.Count;
+				antras.Deti_viena_korta(antras.Ranka[einama], ant_stalo, Kalade);
+				po = ant_stalo.Zaidziamos.Count;
+
+
+				antras.paimti_atverstas(Kalade); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
+
+				if ((antras.atverstos == null) && (antras.Ranka.Count == 0))
+				{
+					zaidzia_uzverstom[kieno_eile] = true;
+				}
+				refresh(kieno_eile);
+				if (pries != po) { kuri = 1; kieno_eile++; }
+			}
+		}*/
 	}
 
 	protected void OnImti3Clicked(object sender, EventArgs e)

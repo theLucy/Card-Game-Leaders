@@ -439,7 +439,7 @@
             <property name="MemberName" />
           </widget>
           <packing>
-            <property name="X">480</property>
+            <property name="X">475</property>
             <property name="Y">283</property>
           </packing>
         </child>
@@ -448,7 +448,7 @@
             <property name="MemberName" />
           </widget>
           <packing>
-            <property name="X">484</property>
+            <property name="X">475</property>
             <property name="Y">216</property>
           </packing>
         </child>
@@ -484,7 +484,7 @@
             <property name="MemberName" />
           </widget>
           <packing>
-            <property name="X">554</property>
+            <property name="X">570</property>
             <property name="Y">403</property>
           </packing>
         </child>
@@ -493,7 +493,7 @@
             <property name="MemberName" />
           </widget>
           <packing>
-            <property name="X">556</property>
+            <property name="X">570</property>
             <property name="Y">344</property>
           </packing>
         </child>
@@ -502,7 +502,7 @@
             <property name="MemberName" />
           </widget>
           <packing>
-            <property name="X">560</property>
+            <property name="X">570</property>
             <property name="Y">281</property>
           </packing>
         </child>
@@ -511,7 +511,7 @@
             <property name="MemberName" />
           </widget>
           <packing>
-            <property name="X">571</property>
+            <property name="X">570</property>
             <property name="Y">214</property>
           </packing>
         </child>
@@ -520,35 +520,8 @@
             <property name="MemberName" />
           </widget>
           <packing>
-            <property name="X">577</property>
+            <property name="X">570</property>
             <property name="Y">158</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Image" id="antr6">
-            <property name="MemberName" />
-          </widget>
-          <packing>
-            <property name="X">623</property>
-            <property name="Y">405</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Image" id="antr7">
-            <property name="MemberName" />
-          </widget>
-          <packing>
-            <property name="X">633</property>
-            <property name="Y">335</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Image" id="antr8">
-            <property name="MemberName" />
-          </widget>
-          <packing>
-            <property name="X">640</property>
-            <property name="Y">251</property>
           </packing>
         </child>
         <child>
@@ -566,7 +539,7 @@
           </widget>
           <packing>
             <property name="X">243</property>
-            <property name="Y">597</property>
+            <property name="Y">600</property>
           </packing>
         </child>
         <child>
@@ -575,7 +548,7 @@
           </widget>
           <packing>
             <property name="X">297</property>
-            <property name="Y">590</property>
+            <property name="Y">600</property>
           </packing>
         </child>
         <child>
@@ -584,7 +557,7 @@
           </widget>
           <packing>
             <property name="X">353</property>
-            <property name="Y">594</property>
+            <property name="Y">600</property>
           </packing>
         </child>
         <child>
@@ -593,7 +566,7 @@
           </widget>
           <packing>
             <property name="X">414</property>
-            <property name="Y">593</property>
+            <property name="Y">600</property>
           </packing>
         </child>
         <child>
@@ -602,7 +575,7 @@
           </widget>
           <packing>
             <property name="X">476</property>
-            <property name="Y">592</property>
+            <property name="Y">600</property>
           </packing>
         </child>
         <child>
@@ -611,7 +584,7 @@
           </widget>
           <packing>
             <property name="X">541</property>
-            <property name="Y">585</property>
+            <property name="Y">600</property>
           </packing>
         </child>
         <child>
@@ -620,7 +593,7 @@
           </widget>
           <packing>
             <property name="X">614</property>
-            <property name="Y">596</property>
+            <property name="Y">600</property>
           </packing>
         </child>
         <child>
@@ -629,7 +602,7 @@
           </widget>
           <packing>
             <property name="X">703</property>
-            <property name="Y">598</property>
+            <property name="Y">600</property>
           </packing>
         </child>
         <child>
@@ -677,6 +650,96 @@
           <packing>
             <property name="X">53</property>
             <property name="Y">8</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="antr6">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">570</property>
+            <property name="Y">103</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="antr13">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">686</property>
+            <property name="Y">352</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="antr14">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">692</property>
+            <property name="Y">285</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="antr15">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">695</property>
+            <property name="Y">228</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="antr7">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">630</property>
+            <property name="Y">403</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="antr8">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">631</property>
+            <property name="Y">341</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="antr9">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">629</property>
+            <property name="Y">283</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="antr10">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">625</property>
+            <property name="Y">223</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="antr11">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">629</property>
+            <property name="Y">163</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="antr12">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">627</property>
+            <property name="Y">106</property>
           </packing>
         </child>
       </widget>
