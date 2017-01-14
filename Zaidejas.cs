@@ -74,8 +74,8 @@ namespace cardgame
         {
             for (int i = 0; i < 3; i++)
             {
-                Ranka.Add(stalas.Zaidziamos.First());
-                stalas.Zaidziamos.RemoveAt(0);
+                Ranka.Add(stalas.Zaidziamos.Last());
+                stalas.Zaidziamos.RemoveAt(stalas.Zaidziamos.Count-1);
             }
                 
         }

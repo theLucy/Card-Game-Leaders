@@ -8,7 +8,7 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/Debug/cardgame.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="857 639">
+  <widget class="Gtk.Window" id="MainWindow" design-size="926 696">
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -558,6 +558,115 @@
           <packing>
             <property name="X">297</property>
             <property name="Y">270</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="pir9">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">243</property>
+            <property name="Y">597</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="pir10">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">297</property>
+            <property name="Y">590</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="pir11">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">353</property>
+            <property name="Y">594</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="pir12">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">414</property>
+            <property name="Y">593</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="pir13">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">476</property>
+            <property name="Y">592</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="pir14">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">541</property>
+            <property name="Y">585</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="pir15">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">614</property>
+            <property name="Y">596</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="pir16">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">703</property>
+            <property name="Y">598</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="imti_3">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Imti 3</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnImti3Clicked" />
+          </widget>
+          <packing>
+            <property name="X">377</property>
+            <property name="Y">308</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="Imti_viska">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Imti viska</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnImtiViskaClicked" />
+          </widget>
+          <packing>
+            <property name="X">351</property>
+            <property name="Y">352</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="GUIkalade">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">418</property>
+            <property name="Y">254</property>
           </packing>
         </child>
       </widget>

@@ -123,6 +123,28 @@ public partial class MainWindow
 
 	private global::Gtk.Image zaidziamos;
 
+	private global::Gtk.Image pir9;
+
+	private global::Gtk.Image pir10;
+
+	private global::Gtk.Image pir11;
+
+	private global::Gtk.Image pir12;
+
+	private global::Gtk.Image pir13;
+
+	private global::Gtk.Image pir14;
+
+	private global::Gtk.Image pir15;
+
+	private global::Gtk.Image pir16;
+
+	private global::Gtk.Button imti_3;
+
+	private global::Gtk.Button Imti_viska;
+
+	private global::Gtk.Image GUIkalade;
+
 	protected virtual void Build()
 	{
 		global::Stetic.Gui.Initialize(this);
@@ -555,16 +577,101 @@ public partial class MainWindow
 		global::Gtk.Fixed.FixedChild w59 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.zaidziamos]));
 		w59.X = 297;
 		w59.Y = 270;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.pir9 = new global::Gtk.Image();
+		this.pir9.Name = "pir9";
+		this.fixed1.Add(this.pir9);
+		global::Gtk.Fixed.FixedChild w60 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir9]));
+		w60.X = 243;
+		w60.Y = 597;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.pir10 = new global::Gtk.Image();
+		this.pir10.Name = "pir10";
+		this.fixed1.Add(this.pir10);
+		global::Gtk.Fixed.FixedChild w61 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir10]));
+		w61.X = 297;
+		w61.Y = 590;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.pir11 = new global::Gtk.Image();
+		this.pir11.Name = "pir11";
+		this.fixed1.Add(this.pir11);
+		global::Gtk.Fixed.FixedChild w62 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir11]));
+		w62.X = 353;
+		w62.Y = 594;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.pir12 = new global::Gtk.Image();
+		this.pir12.Name = "pir12";
+		this.fixed1.Add(this.pir12);
+		global::Gtk.Fixed.FixedChild w63 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir12]));
+		w63.X = 414;
+		w63.Y = 593;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.pir13 = new global::Gtk.Image();
+		this.pir13.Name = "pir13";
+		this.fixed1.Add(this.pir13);
+		global::Gtk.Fixed.FixedChild w64 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir13]));
+		w64.X = 476;
+		w64.Y = 592;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.pir14 = new global::Gtk.Image();
+		this.pir14.Name = "pir14";
+		this.fixed1.Add(this.pir14);
+		global::Gtk.Fixed.FixedChild w65 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir14]));
+		w65.X = 541;
+		w65.Y = 585;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.pir15 = new global::Gtk.Image();
+		this.pir15.Name = "pir15";
+		this.fixed1.Add(this.pir15);
+		global::Gtk.Fixed.FixedChild w66 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir15]));
+		w66.X = 614;
+		w66.Y = 596;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.pir16 = new global::Gtk.Image();
+		this.pir16.Name = "pir16";
+		this.fixed1.Add(this.pir16);
+		global::Gtk.Fixed.FixedChild w67 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir16]));
+		w67.X = 703;
+		w67.Y = 598;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.imti_3 = new global::Gtk.Button();
+		this.imti_3.CanFocus = true;
+		this.imti_3.Name = "imti_3";
+		this.imti_3.UseUnderline = true;
+		this.imti_3.Label = global::Mono.Unix.Catalog.GetString("Imti 3");
+		this.fixed1.Add(this.imti_3);
+		global::Gtk.Fixed.FixedChild w68 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.imti_3]));
+		w68.X = 377;
+		w68.Y = 308;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.Imti_viska = new global::Gtk.Button();
+		this.Imti_viska.CanFocus = true;
+		this.Imti_viska.Name = "Imti_viska";
+		this.Imti_viska.UseUnderline = true;
+		this.Imti_viska.Label = global::Mono.Unix.Catalog.GetString("Imti viska");
+		this.fixed1.Add(this.Imti_viska);
+		global::Gtk.Fixed.FixedChild w69 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.Imti_viska]));
+		w69.X = 351;
+		w69.Y = 352;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.GUIkalade = new global::Gtk.Image();
+		this.GUIkalade.Name = "GUIkalade";
+		this.fixed1.Add(this.GUIkalade);
+		global::Gtk.Fixed.FixedChild w70 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.GUIkalade]));
+		w70.X = 418;
+		w70.Y = 254;
 		this.Add(this.fixed1);
 		if ((this.Child != null))
 		{
 			this.Child.ShowAll();
 		}
-		this.DefaultWidth = 857;
-		this.DefaultHeight = 639;
+		this.DefaultWidth = 926;
+		this.DefaultHeight = 696;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 		this.button1.Clicked += new global::System.EventHandler(this.OnButton1Clicked);
 		this.button2.Clicked += new global::System.EventHandler(this.OnButton2Clicked);
+		this.imti_3.Clicked += new global::System.EventHandler(this.OnImti3Clicked);
+		this.Imti_viska.Clicked += new global::System.EventHandler(this.OnImtiViskaClicked);
 	}
 }

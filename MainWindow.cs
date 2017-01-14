@@ -22,7 +22,7 @@ public partial class MainWindow: Gtk.Window
     cardgame.Stalas ant_stalo = new cardgame.Stalas();
 
 	//Gtk.Fixed.FixedChild ws = ((Gtk.Fixed.FixedChild)(fixed1[image24]));
-	Gtk.Image[] pir = new Gtk.Image[6];
+	Gtk.Image[] pir = new Gtk.Image[15];
 	Gtk.Image[] antr = new Gtk.Image[7];
 	Gtk.Image[] trec = new Gtk.Image[7];
 	Gtk.Image[] ketv = new Gtk.Image[7];
@@ -60,6 +60,15 @@ public partial class MainWindow: Gtk.Window
 		pir[3] = pir4;
 		pir[4] = pir5;
 		pir[5] = pir6;
+		pir[6] = pir7;
+		pir[7] = pir8;
+		pir[8] = pir9;
+		pir[9] = pir10;
+		pir[10] = pir11;
+		pir[11] = pir12;
+		pir[12] = pir13;
+		pir[13] = pir14;
+		pir[14] = pir15;
 
 		antr[0] = antr1;
 		antr[1] = antr2;
@@ -124,21 +133,40 @@ public partial class MainWindow: Gtk.Window
 
 	void pirmas_dalinimas()
 	{
-		for (int i = 0; i < pirmas.Ranka.Count; i++)
+		GUIkalade.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+
+		pirmouzv1.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+		pirmouzv2.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+		pirmouzv3.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+		pirmoatv1.Pixbuf = pirmas.atverstos[0].pav.Pixbuf;
+		pirmoatv2.Pixbuf = pirmas.atverstos[1].pav.Pixbuf;
+		pirmoatv3.Pixbuf = pirmas.atverstos[2].pav.Pixbuf;
+
+		antrouzv1.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+		antrouzv2.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+		antrouzv3.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+		antroatv1.Pixbuf = antras.atverstos[0].pav.Pixbuf;
+		antroatv2.Pixbuf = antras.atverstos[1].pav.Pixbuf;
+		antroatv3.Pixbuf = antras.atverstos[2].pav.Pixbuf;
+
+		treciouzv1.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+		treciouzv2.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+		treciouzv3.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+		trecioatv1.Pixbuf = trecias.atverstos[0].pav.Pixbuf;
+		trecioatv2.Pixbuf = trecias.atverstos[1].pav.Pixbuf;
+		trecioatv3.Pixbuf = trecias.atverstos[2].pav.Pixbuf;
+
+		ketvirtouzv1.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+		ketvirtouzv2.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+		ketvirtouzv3.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+		ketvirtoatv1.Pixbuf = ketvirtas.atverstos[0].pav.Pixbuf;
+		ketvirtoatv2.Pixbuf = ketvirtas.atverstos[1].pav.Pixbuf;
+		ketvirtoatv3.Pixbuf = ketvirtas.atverstos[2].pav.Pixbuf;
+		for (int i = 0; i < 6; i++)
 		{
 			pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf;
-		}
-
-		for (int i = 0; i < antras.Ranka.Count; i++)
-		{
 			antr[i].Pixbuf = antras.Ranka[i].pav.Pixbuf;
-		}
-		for (int i = 0; i < trecias.Ranka.Count; i++)
-		{
 			trec[i].Pixbuf = trecias.Ranka[i].pav.Pixbuf;
-		}
-		for (int i = 0; i < ketvirtas.Ranka.Count; i++)
-		{
 			ketv[i].Pixbuf = ketvirtas.Ranka[i].pav.Pixbuf;
 		}
 	}
@@ -158,13 +186,22 @@ public partial class MainWindow: Gtk.Window
 	}
 	void refresh(int kurio)
 	{
-		zaidziamos.Pixbuf = ant_stalo.Zaidziamos[ant_stalo.Zaidziamos.Count-1].pav.Pixbuf;
+		if (Kalade.Kortos.Count != 0) { GUIkalade.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png"); }
+		else { GUIkalade.Pixbuf = null;}
+		if (ant_stalo.Zaidziamos.Count != 0) { zaidziamos.Pixbuf = ant_stalo.Zaidziamos.Last().pav.Pixbuf; }
+		else { zaidziamos.Pixbuf = null; }
+
+
 		if (kurio == 1)
 		{
-			for (int i = 0; i < 6; i++)
+			for (int i = 0; i < pirmas.Ranka.Count; i++)
 			{
-				if (pirmas.Ranka[i].pav != null) { pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf; }
-				else { pir[i] = null; }
+				pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf; 
+
+			}
+			for (int i = pirmas.Ranka.Count+1; i < 15; i++)
+			{
+				pir[i].Pixbuf = null;
 			}
 		}
 
@@ -200,13 +237,30 @@ public partial class MainWindow: Gtk.Window
 			}
 			else if (args.Event.Key == Gdk.Key.Up)
 			{
-				MessageDialog md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, Kalade.Kortos.Count.ToString());
-				md.Run();
-				md.Destroy();
 				pirmas.Deti_viena_korta(pirmas.Ranka[einama],ant_stalo,Kalade);
 
-				refresh(1);
+				refresh(kieno_eile);
 			}
+		}
+	}
+
+	protected void OnImti3Clicked(object sender, EventArgs e)
+	{
+		if (kieno_eile == 1)
+		{
+			
+			pirmas.Imti_3(ant_stalo);
+			refresh(kieno_eile);
+		}
+	}
+
+	protected void OnImtiViskaClicked(object sender, EventArgs e)
+	{
+		if (kieno_eile == 1)
+		{
+
+			pirmas.imti_viska(ant_stalo);
+			refresh(kieno_eile);
 		}
 	}
 }
