@@ -7,9 +7,10 @@
   <MonoDevelop.Ide.ItemProperties.cardgame PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="MainWindow.cs">
     <Files>
-      <File FileName="Zaidejas.cs" Line="78" Column="6" />
-      <File FileName="Stalas.cs" Line="1" Column="1" />
-      <File FileName="MainWindow.cs" Line="1" Column="1" />
+      <File FileName="Kalade.cs" Line="16" Column="28" />
+      <File FileName="Korta.cs" Line="1" Column="1" />
+      <File FileName="Garsas.cs" Line="1" Column="1" />
+      <File FileName="MainWindow.cs" Line="26" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>

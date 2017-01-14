@@ -6,26 +6,27 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using cardgame;
 
 public partial class MainWindow: Gtk.Window
 {
     
     Gtk.Fixed.FixedChild w1;
 	int kuri = 0, kieno_eile = 1, einama,pries,po; //einama - tai ta kuri pasirinkta, bet nepadeta
-	bool[] zaidzia_uzverstom = new bool[5];
+	bool[] zaidzia_uzverstom;
     cardgame.Kalade Kalade = new cardgame.Kalade();
     cardgame.Zaidejas pirmas = new cardgame.Zaidejas();
     cardgame.Zaidejas antras = new cardgame.Zaidejas();
     cardgame.Zaidejas trecias = new cardgame.Zaidejas();
     cardgame.Zaidejas ketvirtas = new cardgame.Zaidejas();
     cardgame.Zaidejas penktas = new cardgame.Zaidejas();
-    cardgame.Zaidejas[] visi = new cardgame.Zaidejas[5];
+	cardgame.Zaidejas[] visi;
     cardgame.Stalas ant_stalo = new cardgame.Stalas();
 
-	Gtk.Image[] pir = new Gtk.Image[15];
-	Gtk.Image[] antr = new Gtk.Image[15];
-	Gtk.Image[] trec = new Gtk.Image[7];
-	Gtk.Image[] ketv = new Gtk.Image[7];
+	Gtk.Image[] pir;
+	Gtk.Image[] antr;
+	Gtk.Image[] trec;
+	Gtk.Image[] ketv;
 	Gtk.Fixed.FixedChild[] imgsch = new Gtk.Fixed.FixedChild[56];
 
 	public MainWindow () : base (Gtk.WindowType.Toplevel)
@@ -41,70 +42,19 @@ public partial class MainWindow: Gtk.Window
         label3.Text = "butono koordinates: " + w1.X.ToString() + " " + w1.Y.ToString();
 
 
-        visi[0] = pirmas;
-        visi[1] = antras;
-        visi[2] = trecias;
-        visi[3] = ketvirtas;
-        visi[4] = penktas;
+		visi = new cardgame.Zaidejas[] { pirmas, antras, trecias, ketvirtas, penktas };
 
         ant_stalo.dalinimas(4, visi, Kalade);
 
 	}
 	void priskiria_img()
 	{
-		zaidzia_uzverstom[1] = false;
-		zaidzia_uzverstom[2] = false;
-		zaidzia_uzverstom[3] = false;
-		zaidzia_uzverstom[4] = false;
-		
-		pir[0] = pir1;
-		pir[1] = pir2;
-		pir[2] = pir3;
-		pir[3] = pir4;
-		pir[4] = pir5;
-		pir[5] = pir6;
-		pir[6] = pir7;
-		pir[7] = pir8;
-		pir[8] = pir9;
-		pir[9] = pir10;
-		pir[10] = pir11;
-		pir[11] = pir12;
-		pir[12] = pir13;
-		pir[13] = pir14;
-		pir[14] = pir15;
+		zaidzia_uzverstom = new bool[] { false, false, false, false };
 
-		antr[0] = antr1;
-		antr[1] = antr2;
-		antr[2] = antr3;
-		antr[3] = antr4;
-		antr[4] = antr5;
-		antr[5] = antr6;
-		antr[6] = antr7;
-		antr[7] = antr8;
-		antr[8] = antr9;
-		antr[9] = antr10;
-		antr[10] = antr11;
-		antr[11] = antr12;
-		antr[12] = antr13;
-		antr[13] = antr14;
-		antr[14] = antr15;
-
-		trec[0] = trec1;
-		trec[1] = trec2;
-		trec[2] = trec3;
-		trec[3] = trec4;
-		trec[4] = trec5;
-		trec[5] = trec6;
-		trec[6] = trec7;
-
-		ketv[0] = ketv1;
-		ketv[1] = ketv2;
-		ketv[2] = ketv3;
-		ketv[3] = ketv4;
-		ketv[4] = ketv5;
-		ketv[5] = ketv6;
-		ketv[6] = ketv7;
-
+		pir = new Gtk.Image[] { pir1, pir2, pir3, pir4, pir5, pir6, pir7, pir8, pir9, pir10, pir11,pir12, pir13, pir14, pir15 };
+		antr = new Gtk.Image[] { antr1, antr2, antr3, antr4, antr5, antr6, antr7, antr8, antr9, antr10, antr11, antr12, antr13, antr14, antr15 };
+		trec = new Gtk.Image[] { trec1, trec2, trec3, trec4, trec5, trec6, trec7 };
+		ketv = new Gtk.Image[] { ketv1, ketv2, ketv3, ketv4, ketv5, ketv6, ketv7 };
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)

@@ -71,6 +71,7 @@
     <EmbeddedResource Include="Resources\nugara.png" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Garsas.cs" />
     <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="MainWindow.cs" />
     <Compile Include="gtk-gui\MainWindow.cs" />
