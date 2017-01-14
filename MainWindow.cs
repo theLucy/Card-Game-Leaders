@@ -11,7 +11,7 @@ public partial class MainWindow: Gtk.Window
 {
     
     Gtk.Fixed.FixedChild w1;
-	int kuri = 0, kieno_eile = 1, kur_detix = 200, kur_detiy = 200, einama; //einama - tai ta kuri pasirinkta, bet nepadeta
+	int kuri = 0, kieno_eile = 1, einama; //einama - tai ta kuri pasirinkta, bet nepadeta
     cardgame.Kalade Kalade = new cardgame.Kalade();
     cardgame.Zaidejas pirmas = new cardgame.Zaidejas();
     cardgame.Zaidejas antras = new cardgame.Zaidejas();
@@ -174,7 +174,7 @@ public partial class MainWindow: Gtk.Window
 	{
 		if (kurio == 1)
 		{
-			for (int i = 0; i < 6; i++)
+			for (int i = 0; i < pirmas.Ranka.Count; i++)
 			{
 				if (((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y != 515)
 				{
@@ -199,6 +199,9 @@ public partial class MainWindow: Gtk.Window
 				pirmoatv2.Pixbuf = null;
 				pirmoatv3.Pixbuf = null;
 			}
+			if (pirmas.uzverstos[0] == null) { pirmouzv1.Pixbuf = null; }
+			if (pirmas.uzverstos[1] == null) { pirmouzv2.Pixbuf = null; }
+			if (pirmas.uzverstos[2] == null) { pirmouzv3.Pixbuf = null; }
 			for (int i = 0; i < pirmas.Ranka.Count; i++)
 			{
 				pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf; 
@@ -221,10 +224,12 @@ public partial class MainWindow: Gtk.Window
 			
 			if (args.Event.Key == Gdk.Key.Right)
 			{
-				sulygina(1);
-				if (kuri <= pirmas.Ranka.Count)
+				
+				if (kuri < pirmas.Ranka.Count-1)
 				{
+					sulygina(1);
 					kuri++;
+
 					((Gtk.Fixed.FixedChild)(fixed1[pir[kuri]])).Y -= 20;
 					einama=kuri;
 
@@ -232,9 +237,11 @@ public partial class MainWindow: Gtk.Window
 			}
 			else if (args.Event.Key == Gdk.Key.Left)
 			{
-				sulygina(1);
+
+
 				if (kuri > 0)
 				{
+					sulygina(1);
 					kuri--;
 					((Gtk.Fixed.FixedChild)(fixed1[pir[kuri]])).Y -= 20;
 					einama = kuri;

@@ -72,11 +72,14 @@ namespace cardgame
         }
         public void Imti_3(Stalas stalas)
         {
-            for (int i = 0; i < 3; i++)
-            {
-                Ranka.Add(stalas.Zaidziamos.Last());
-                stalas.Zaidziamos.RemoveAt(stalas.Zaidziamos.Count-1);
-            }
+			if (stalas.Zaidziamos.Count > 2)
+			{
+				for (int i = 0; i < 3; i++)
+				{
+					Ranka.Add(stalas.Zaidziamos.Last());
+					stalas.Zaidziamos.RemoveAt(stalas.Zaidziamos.Count - 1);
+				}
+			}
                 
         }
         public void imti_viska(Stalas stalas)
