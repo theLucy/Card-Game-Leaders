@@ -71,7 +71,7 @@
           </widget>
           <packing>
             <property name="X">268</property>
-            <property name="Y">399</property>
+            <property name="Y">400</property>
           </packing>
         </child>
         <child>
@@ -80,7 +80,7 @@
           </widget>
           <packing>
             <property name="X">338</property>
-            <property name="Y">401</property>
+            <property name="Y">400</property>
           </packing>
         </child>
         <child>
@@ -89,7 +89,7 @@
           </widget>
           <packing>
             <property name="X">413</property>
-            <property name="Y">405</property>
+            <property name="Y">400</property>
           </packing>
         </child>
         <child>
@@ -667,6 +667,16 @@
           <packing>
             <property name="X">418</property>
             <property name="Y">254</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label1">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Valdymas: vaiksciojimas per kortas rodykles i sonus, padet korta rodykle i virsu, paimt uzversta i apacia</property>
+          </widget>
+          <packing>
+            <property name="X">53</property>
+            <property name="Y">8</property>
           </packing>
         </child>
       </widget>

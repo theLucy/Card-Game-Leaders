@@ -12,6 +12,7 @@ public partial class MainWindow: Gtk.Window
     
     Gtk.Fixed.FixedChild w1;
 	int kuri = 0, kieno_eile = 1, einama; //einama - tai ta kuri pasirinkta, bet nepadeta
+	bool[] zaidzia_uzverstom = new bool[5];
     cardgame.Kalade Kalade = new cardgame.Kalade();
     cardgame.Zaidejas pirmas = new cardgame.Zaidejas();
     cardgame.Zaidejas antras = new cardgame.Zaidejas();
@@ -52,7 +53,10 @@ public partial class MainWindow: Gtk.Window
 	}
 	void priskiria_img()
 	{
-		
+		zaidzia_uzverstom[1] = false;
+		zaidzia_uzverstom[2] = false;
+		zaidzia_uzverstom[3] = false;
+		zaidzia_uzverstom[4] = false;
 		
 		pir[0] = pir1;
 		pir[1] = pir2;
@@ -181,6 +185,13 @@ public partial class MainWindow: Gtk.Window
 					((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y += 20;
 				}
 			}
+			if (zaidzia_uzverstom[1]==true)
+			{
+				if (((Gtk.Fixed.FixedChild)(fixed1[pirmouzv1])).Y != 400){((Gtk.Fixed.FixedChild)(fixed1[pirmouzv1])).Y += 20;}
+				if (((Gtk.Fixed.FixedChild)(fixed1[pirmouzv2])).Y != 400) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv2])).Y += 20; }
+				if (((Gtk.Fixed.FixedChild)(fixed1[pirmouzv3])).Y != 400) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv3])).Y += 20; }
+
+			}
 					
 		}
 	}
@@ -221,17 +232,24 @@ public partial class MainWindow: Gtk.Window
 		//Console.WriteLine(args.Event.Key);
 		if (kieno_eile == 1)
 		{
-			
+
 			if (args.Event.Key == Gdk.Key.Right)
 			{
-				
-				if (kuri < pirmas.Ranka.Count-1)
+
+				if ((kuri < pirmas.Ranka.Count - 1) || (zaidzia_uzverstom[kieno_eile] == true))
 				{
 					sulygina(1);
 					kuri++;
+					if (zaidzia_uzverstom[kieno_eile] == true)
+					{
+						if (kuri == 0) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv1])).Y -= 20; }
+						else if (kuri == 1) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv2])).Y -= 20; }
+						else { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv3])).Y -= 20; }
 
-					((Gtk.Fixed.FixedChild)(fixed1[pir[kuri]])).Y -= 20;
-					einama=kuri;
+					}
+					else { ((Gtk.Fixed.FixedChild)(fixed1[pir[kuri]])).Y -= 20; }
+					//((Gtk.Fixed.FixedChild)(fixed1[pir[kuri]])).Y -= 20;
+					einama = kuri;
 
 				}
 			}
@@ -239,20 +257,44 @@ public partial class MainWindow: Gtk.Window
 			{
 
 
-				if (kuri > 0)
+				if ((kuri > 0) || (zaidzia_uzverstom[kieno_eile] == true))
 				{
 					sulygina(1);
 					kuri--;
-					((Gtk.Fixed.FixedChild)(fixed1[pir[kuri]])).Y -= 20;
+					if (zaidzia_uzverstom[kieno_eile] == true)
+					{
+						if (kuri == 0) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv1])).Y -= 20; }
+						else if (kuri == 1) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv2])).Y -= 20; }
+						else { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv3])).Y -= 20; }
+
+					}
+					else { ((Gtk.Fixed.FixedChild)(fixed1[pir[kuri]])).Y -= 20; }
 					einama = kuri;
 				}
+			}
+			else if (args.Event.Key == Gdk.Key.Down)
+			{
+				MessageDialog md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "l");
+				md.Run();
+				md.Destroy();
+				if (zaidzia_uzverstom[kieno_eile] == true)
+				{
+					pirmas.paimti_uzversta(einama); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
+				}
+				refresh(kieno_eile);
 			}
 			else if (args.Event.Key == Gdk.Key.Up)
 			{
 				pirmas.Deti_viena_korta(pirmas.Ranka[einama],ant_stalo,Kalade);
 				pirmas.paimti_atverstas(Kalade); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
-				pirmas.paimti_uzversta(0); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
-
+				/*if (zaidzia_uzverstom[kieno_eile] == true)
+				{
+					pirmas.paimti_uzversta(kuri); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
+				}*/
+				if ((pirmas.atverstos == null) && (pirmas.Ranka.Count== 0))
+				{
+					zaidzia_uzverstom[kieno_eile] = true;
+				}
 				refresh(kieno_eile);
 			}
 		}

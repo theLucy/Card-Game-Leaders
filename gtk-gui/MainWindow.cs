@@ -145,6 +145,8 @@ public partial class MainWindow
 
 	private global::Gtk.Image GUIkalade;
 
+	private global::Gtk.Label label1;
+
 	protected virtual void Build()
 	{
 		global::Stetic.Gui.Initialize(this);
@@ -198,21 +200,21 @@ public partial class MainWindow
 		this.fixed1.Add(this.pirmouzv1);
 		global::Gtk.Fixed.FixedChild w5 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pirmouzv1]));
 		w5.X = 268;
-		w5.Y = 399;
+		w5.Y = 400;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.pirmouzv2 = new global::Gtk.Image();
 		this.pirmouzv2.Name = "pirmouzv2";
 		this.fixed1.Add(this.pirmouzv2);
 		global::Gtk.Fixed.FixedChild w6 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pirmouzv2]));
 		w6.X = 338;
-		w6.Y = 401;
+		w6.Y = 400;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.pirmouzv3 = new global::Gtk.Image();
 		this.pirmouzv3.Name = "pirmouzv3";
 		this.fixed1.Add(this.pirmouzv3);
 		global::Gtk.Fixed.FixedChild w7 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pirmouzv3]));
 		w7.X = 413;
-		w7.Y = 405;
+		w7.Y = 400;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.pirmoatv1 = new global::Gtk.Image();
 		this.pirmoatv1.Name = "pirmoatv1";
@@ -660,6 +662,15 @@ public partial class MainWindow
 		global::Gtk.Fixed.FixedChild w70 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.GUIkalade]));
 		w70.X = 418;
 		w70.Y = 254;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.label1 = new global::Gtk.Label();
+		this.label1.Name = "label1";
+		this.label1.LabelProp = global::Mono.Unix.Catalog.GetString("Valdymas: vaiksciojimas per kortas rodykles i sonus, padet korta rodykle i virsu," +
+				" paimt uzversta i apacia");
+		this.fixed1.Add(this.label1);
+		global::Gtk.Fixed.FixedChild w71 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.label1]));
+		w71.X = 53;
+		w71.Y = 8;
 		this.Add(this.fixed1);
 		if ((this.Child != null))
 		{
