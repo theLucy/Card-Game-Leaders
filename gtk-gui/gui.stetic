@@ -161,7 +161,7 @@
           </widget>
           <packing>
             <property name="X">504</property>
-            <property name="Y">522</property>
+            <property name="Y">515</property>
           </packing>
         </child>
         <child>
@@ -170,7 +170,7 @@
           </widget>
           <packing>
             <property name="X">572</property>
-            <property name="Y">517</property>
+            <property name="Y">515</property>
           </packing>
         </child>
         <child>
@@ -179,7 +179,7 @@
           </widget>
           <packing>
             <property name="X">640</property>
-            <property name="Y">519</property>
+            <property name="Y">515</property>
           </packing>
         </child>
         <child>
@@ -188,7 +188,7 @@
           </widget>
           <packing>
             <property name="X">717</property>
-            <property name="Y">521</property>
+            <property name="Y">515</property>
           </packing>
         </child>
         <child>

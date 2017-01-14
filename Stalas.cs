@@ -43,7 +43,7 @@ namespace cardgame
             }
             for (int i = 0; i < kiek_zaideju; i++)
             {
-                for (int j = 0; j < 3; j++)
+                for (int j = 0; j < 6; j++)
                 {
                     visi[i].Ranka.Add(k.Kortos.First());
                     k.Kortos.RemoveAt(0);

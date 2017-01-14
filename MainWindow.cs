@@ -22,7 +22,7 @@ public partial class MainWindow: Gtk.Window
     cardgame.Stalas ant_stalo = new cardgame.Stalas();
 
 	//Gtk.Fixed.FixedChild ws = ((Gtk.Fixed.FixedChild)(fixed1[image24]));
-	Gtk.Image[] pir = new Gtk.Image[7];
+	Gtk.Image[] pir = new Gtk.Image[6];
 	Gtk.Image[] antr = new Gtk.Image[7];
 	Gtk.Image[] trec = new Gtk.Image[7];
 	Gtk.Image[] ketv = new Gtk.Image[7];
@@ -47,7 +47,7 @@ public partial class MainWindow: Gtk.Window
         visi[3] = ketvirtas;
         visi[4] = penktas;
 
-        ant_stalo.dalinimas(5, visi, Kalade);
+        ant_stalo.dalinimas(4, visi, Kalade);
 
 	}
 	void priskiria_img()
@@ -60,7 +60,6 @@ public partial class MainWindow: Gtk.Window
 		pir[3] = pir4;
 		pir[4] = pir5;
 		pir[5] = pir6;
-		pir[6] = pir7;
 
 		antr[0] = antr1;
 		antr[1] = antr2;
@@ -125,12 +124,11 @@ public partial class MainWindow: Gtk.Window
 
 	void pirmas_dalinimas()
 	{
-
-
 		for (int i = 0; i < pirmas.Ranka.Count; i++)
 		{
 			pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf;
 		}
+
 		for (int i = 0; i < antras.Ranka.Count; i++)
 		{
 			antr[i].Pixbuf = antras.Ranka[i].pav.Pixbuf;
@@ -148,7 +146,7 @@ public partial class MainWindow: Gtk.Window
 	{
 		if (kurio == 1)
 		{
-			for (int i = 0; i < 3; i++)
+			for (int i = 0; i < 6; i++)
 			{
 				if (((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y != 515)
 				{
@@ -157,6 +155,19 @@ public partial class MainWindow: Gtk.Window
 			}
 					
 		}
+	}
+	void refresh(int kurio)
+	{
+		zaidziamos.Pixbuf = ant_stalo.Zaidziamos[ant_stalo.Zaidziamos.Count-1].pav.Pixbuf;
+		if (kurio == 1)
+		{
+			for (int i = 0; i < 6; i++)
+			{
+				if (pirmas.Ranka[i].pav != null) { pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf; }
+				else { pir[i] = null; }
+			}
+		}
+
 	}
 	[GLib.ConnectBefore]
 	protected void KeyPress(object sender, KeyPressEventArgs args)
@@ -189,7 +200,12 @@ public partial class MainWindow: Gtk.Window
 			}
 			else if (args.Event.Key == Gdk.Key.Up)
 			{
-				zaidziamos.Pixbuf = pir[einama].Pixbuf;
+				MessageDialog md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, Kalade.Kortos.Count.ToString());
+				md.Run();
+				md.Destroy();
+				pirmas.Deti_viena_korta(pirmas.Ranka[einama],ant_stalo,Kalade);
+
+				refresh(1);
 			}
 		}
 	}

@@ -246,28 +246,28 @@ public partial class MainWindow
 		this.fixed1.Add(this.pir5);
 		global::Gtk.Fixed.FixedChild w15 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir5]));
 		w15.X = 504;
-		w15.Y = 522;
+		w15.Y = 515;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.pir6 = new global::Gtk.Image();
 		this.pir6.Name = "pir6";
 		this.fixed1.Add(this.pir6);
 		global::Gtk.Fixed.FixedChild w16 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir6]));
 		w16.X = 572;
-		w16.Y = 517;
+		w16.Y = 515;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.pir7 = new global::Gtk.Image();
 		this.pir7.Name = "pir7";
 		this.fixed1.Add(this.pir7);
 		global::Gtk.Fixed.FixedChild w17 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir7]));
 		w17.X = 640;
-		w17.Y = 519;
+		w17.Y = 515;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.pir8 = new global::Gtk.Image();
 		this.pir8.Name = "pir8";
 		this.fixed1.Add(this.pir8);
 		global::Gtk.Fixed.FixedChild w18 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.pir8]));
 		w18.X = 717;
-		w18.Y = 521;
+		w18.Y = 515;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.ketvirtouzv1 = new global::Gtk.Image();
 		this.ketvirtouzv1.Name = "ketvirtouzv1";

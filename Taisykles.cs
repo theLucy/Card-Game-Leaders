@@ -16,6 +16,7 @@ namespace cardgame
         {
             if ((dedu.verte == 2) || (dedu.verte == 10) || (dedu.verte >= ant.verte)) { return true; }
             else { return false; }
+
         }
        
     }

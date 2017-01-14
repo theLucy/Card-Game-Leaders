@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gtk;
 
 namespace cardgame
 {
@@ -19,20 +20,23 @@ namespace cardgame
         {
             if (stalas.Zaidziamos.Count != 0)
             { 
-                if (Tikrina(ka, stalas.Zaidziamos.First())) { stalas.Padejo(ka);Ranka.Remove(ka); };
+				if (Tikrina(ka, stalas.Zaidziamos.Last())) { stalas.Padejo(ka);Ranka.Remove(ka);imti_po_dejimo(kalade); };
                 
             }
-            else { stalas.Padejo(ka); Ranka.Remove(ka); }
-            imti_po_dejimo(kalade);
+            else { stalas.Padejo(ka); Ranka.Remove(ka); imti_po_dejimo(kalade);}
+            
         }
 
         public void imti_po_dejimo(Kalade kalade)
         {
-            while ((Ranka.Count <= 6) || (kalade.Kortos.Count > 0))
-            {
-                Ranka.Add(kalade.Kortos.First());
-                kalade.Kortos.RemoveAt(0);
-            }
+			if (kalade.Kortos.Count > 0)
+			{
+				while (Ranka.Count < 6)
+				{
+					Ranka.Add(kalade.Kortos.First());
+					kalade.Kortos.RemoveAt(0);
+				}
+			}
         }
 
         public void paimti_atverstas(Kalade kalade)
