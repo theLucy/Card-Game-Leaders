@@ -191,15 +191,20 @@ public partial class MainWindow: Gtk.Window
 		if (ant_stalo.Zaidziamos.Count != 0) { zaidziamos.Pixbuf = ant_stalo.Zaidziamos.Last().pav.Pixbuf; }
 		else { zaidziamos.Pixbuf = null; }
 
-
 		if (kurio == 1)
 		{
+			if (pirmas.atverstos == null)
+			{
+				pirmoatv1.Pixbuf = null;
+				pirmoatv2.Pixbuf = null;
+				pirmoatv3.Pixbuf = null;
+			}
 			for (int i = 0; i < pirmas.Ranka.Count; i++)
 			{
 				pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf; 
 
 			}
-			for (int i = pirmas.Ranka.Count+1; i < 15; i++)
+			for (int i = pirmas.Ranka.Count; i < 15; i++)
 			{
 				pir[i].Pixbuf = null;
 			}
@@ -238,6 +243,8 @@ public partial class MainWindow: Gtk.Window
 			else if (args.Event.Key == Gdk.Key.Up)
 			{
 				pirmas.Deti_viena_korta(pirmas.Ranka[einama],ant_stalo,Kalade);
+				pirmas.paimti_atverstas(Kalade); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
+				pirmas.paimti_uzversta(0); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
 
 				refresh(kieno_eile);
 			}
