@@ -22,7 +22,6 @@ public partial class MainWindow: Gtk.Window
     cardgame.Zaidejas[] visi = new cardgame.Zaidejas[5];
     cardgame.Stalas ant_stalo = new cardgame.Stalas();
 
-	//Gtk.Fixed.FixedChild ws = ((Gtk.Fixed.FixedChild)(fixed1[image24]));
 	Gtk.Image[] pir = new Gtk.Image[15];
 	Gtk.Image[] antr = new Gtk.Image[15];
 	Gtk.Image[] trec = new Gtk.Image[7];
@@ -176,10 +175,14 @@ public partial class MainWindow: Gtk.Window
 		ketvirtoatv3.Pixbuf = ketvirtas.atverstos[2].pav.Pixbuf;
 		for (int i = 0; i < 6; i++)
 		{
-			pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf;
+			/*pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf;
 			antr[i].Pixbuf = antras.Ranka[i].pav.Pixbuf;
 			trec[i].Pixbuf = trecias.Ranka[i].pav.Pixbuf;
-			ketv[i].Pixbuf = ketvirtas.Ranka[i].pav.Pixbuf;
+			ketv[i].Pixbuf = ketvirtas.Ranka[i].pav.Pixbuf;*/
+			pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf;
+			antr[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+			trec[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+			ketv[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
 		}
 	}
 	void sulygina(int kurio)
@@ -188,11 +191,11 @@ public partial class MainWindow: Gtk.Window
 		{
 			for (int i = 0; i < pirmas.Ranka.Count; i++)
 			{
-				if (((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y != 515)
+				if ((((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y != 515)&&(i<8))
 				{
 					((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y += 20; 
 				}
-				else if ((((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y != 600) && (i > 8))  //cia gryba pjaun
+				else if ((((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y != 600) && (i >= 8))  //cia gryba pjaun
 				{
 					((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y += 20;
 				}
@@ -206,24 +209,6 @@ public partial class MainWindow: Gtk.Window
 			}
 					
 		}
-		/*else if (kurio == 2)
-		{
-			for (int i = 0; i < antras.Ranka.Count; i++)
-			{
-				if (((Gtk.Fixed.FixedChild)(fixed1[antr[i]])).X != 570)
-				{
-					((Gtk.Fixed.FixedChild)(fixed1[antr[i]])).X += 20;
-				}
-			}
-			if (zaidzia_uzverstom[kurio] == true)
-			{
-				if (((Gtk.Fixed.FixedChild)(fixed1[antrouzv1])).X != 475) { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv1])).X += 20; }
-				if (((Gtk.Fixed.FixedChild)(fixed1[antrouzv2])).X != 475) { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv2])).X += 20; }
-				if (((Gtk.Fixed.FixedChild)(fixed1[antrouzv3])).X != 475) { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv3])).X += 20; }
-
-			}
-
-		}*/
 	}
 	void refresh(int kurio)
 	{
@@ -253,27 +238,6 @@ public partial class MainWindow: Gtk.Window
 				pir[i].Pixbuf = null;
 			}
 		}
-		/*else if (kurio == 2)
-		{
-			if (antras.atverstos == null)
-			{
-				antroatv1.Pixbuf = null;
-				antroatv2.Pixbuf = null;
-				antroatv3.Pixbuf = null;
-			}
-			if (antras.uzverstos[0] == null) { antrouzv1.Pixbuf = null; }
-			if (antras.uzverstos[1] == null) { antrouzv2.Pixbuf = null; }
-			if (antras.uzverstos[2] == null) { antrouzv3.Pixbuf = null; }
-			for (int i = 0; i < antras.Ranka.Count; i++)
-			{
-				antr[i].Pixbuf = antras.Ranka[i].pav.Pixbuf;
-
-			}
-			for (int i = antras.Ranka.Count; i < 15; i++)
-			{
-				antr[i].Pixbuf = null;
-			}
-		}*/
 
 
 	}
@@ -300,7 +264,6 @@ public partial class MainWindow: Gtk.Window
 
 					}
 					else { ((Gtk.Fixed.FixedChild)(fixed1[pir[kuri]])).Y -= 20; }
-					//((Gtk.Fixed.FixedChild)(fixed1[pir[kuri]])).Y -= 20;
 					einama = kuri;
 
 				}
@@ -351,74 +314,7 @@ public partial class MainWindow: Gtk.Window
 
 			}
 		}
-		/*else if (kieno_eile == 2)
-		{
 
-			if (args.Event.Key == Gdk.Key.Up)
-			{
-
-				if ((kuri < antras.Ranka.Count - 1) || (zaidzia_uzverstom[kieno_eile] == true))
-				{
-					sulygina(2);
-					kuri++;
-					if (zaidzia_uzverstom[kieno_eile] == true)
-					{
-						if (kuri == 0) { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv1])).X -= 20; }
-						else if (kuri == 1) { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv2])).X -= 20; }
-						else { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv3])).X -= 20; }
-
-					}
-					else { ((Gtk.Fixed.FixedChild)(fixed1[antr[kuri]])).X -= 20; }
-					einama = kuri;
-
-				}
-			}
-			else if (args.Event.Key == Gdk.Key.Down)
-			{
-
-
-				if ((kuri > 0) || (zaidzia_uzverstom[kieno_eile] == true))
-				{
-					sulygina(2);
-					kuri--;
-					if (zaidzia_uzverstom[kieno_eile] == true)
-					{
-						if (kuri == 0) { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv1])).X -= 20; }
-						else if (kuri == 1) { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv2])).X -= 20; }
-						else { ((Gtk.Fixed.FixedChild)(fixed1[antrouzv3])).X -= 20; }
-
-					}
-					else { ((Gtk.Fixed.FixedChild)(fixed1[antr[kuri]])).X -= 20; }
-					einama = kuri;
-				}
-			}
-			else if (args.Event.Key == Gdk.Key.Right)
-			{
-
-				if (zaidzia_uzverstom[kieno_eile] == true)
-				{
-					antras.paimti_uzversta(einama); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
-					zaidzia_uzverstom[kieno_eile] = false;
-				}
-				refresh(kieno_eile);
-			}
-			else if (args.Event.Key == Gdk.Key.Left)
-			{
-				pries = ant_stalo.Zaidziamos.Count;
-				antras.Deti_viena_korta(antras.Ranka[einama], ant_stalo, Kalade);
-				po = ant_stalo.Zaidziamos.Count;
-
-
-				antras.paimti_atverstas(Kalade); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
-
-				if ((antras.atverstos == null) && (antras.Ranka.Count == 0))
-				{
-					zaidzia_uzverstom[kieno_eile] = true;
-				}
-				refresh(kieno_eile);
-				if (pries != po) { kuri = 1; kieno_eile++; }
-			}
-		}*/
 	}
 
 	protected void OnImti3Clicked(object sender, EventArgs e)
