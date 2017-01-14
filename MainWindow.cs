@@ -6,13 +6,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using cardgame;
 
 public partial class MainWindow: Gtk.Window
 {
     
     Gtk.Fixed.FixedChild w1;
-	int kuri = 0, kieno_eile = 1, einama,pries,po; //einama - tai ta kuri pasirinkta, bet nepadeta
+	int kuri = 0, kieno_eile = 1, einama = 0,pries,po; //einama - tai ta kuri pasirinkta, bet nepadeta
 	bool[] zaidzia_uzverstom;
     cardgame.Kalade Kalade = new cardgame.Kalade();
     cardgame.Zaidejas pirmas = new cardgame.Zaidejas();
@@ -194,7 +195,6 @@ public partial class MainWindow: Gtk.Window
 	[GLib.ConnectBefore]
 	protected void KeyPress(object sender, KeyPressEventArgs args)
 	{
-		
 		//Console.WriteLine(args.Event.Key);
 		if (kieno_eile == 1)
 		{
@@ -213,7 +213,11 @@ public partial class MainWindow: Gtk.Window
 						else { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv3])).Y -= 20; }
 
 					}
-					else { ((Gtk.Fixed.FixedChild)(fixed1[pir[kuri]])).Y -= 20; }
+					else 
+					{ 
+						((Gtk.Fixed.FixedChild)(fixed1[pir[kuri]])).Y -= 20; 
+						Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
+					}
 					einama = kuri;
 
 				}
@@ -233,7 +237,11 @@ public partial class MainWindow: Gtk.Window
 						else { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv3])).Y -= 20; }
 
 					}
-					else { ((Gtk.Fixed.FixedChild)(fixed1[pir[kuri]])).Y -= 20; }
+					else 
+					{ 
+						((Gtk.Fixed.FixedChild)(fixed1[pir[kuri]])).Y -= 20; 
+						Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
+					}
 					einama = kuri;
 				}
 			}
@@ -249,8 +257,14 @@ public partial class MainWindow: Gtk.Window
 			}
 			else if (args.Event.Key == Gdk.Key.Up)
 			{
+				
 				pries = ant_stalo.Zaidziamos.Count;
-				pirmas.Deti_viena_korta(pirmas.Ranka[einama],ant_stalo,Kalade);
+
+				if ( !((pirmas.Ranka.Count - 1) < einama) && pirmas.Deti_viena_korta(pirmas.Ranka[einama], ant_stalo, Kalade))
+				{
+					Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
+				}
+
 				po = ant_stalo.Zaidziamos.Count;
 
 				pirmas.paimti_atverstas(Kalade); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
@@ -271,7 +285,6 @@ public partial class MainWindow: Gtk.Window
 	{
 		if (kieno_eile == 1)
 		{
-			
 			pirmas.Imti_3(ant_stalo);
 			refresh(kieno_eile);
 		}

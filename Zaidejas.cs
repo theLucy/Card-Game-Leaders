@@ -16,15 +16,22 @@ namespace cardgame
         {
 
         }
-        public void Deti_viena_korta(Korta ka,Stalas stalas,Kalade kalade)
+        public bool Deti_viena_korta(Korta ka,Stalas stalas,Kalade kalade)
         {
-            if (stalas.Zaidziamos.Count != 0)
-            { 
-				if (Tikrina(ka, stalas.Zaidziamos.Last())) { stalas.Padejo(ka);Ranka.Remove(ka);imti_po_dejimo(kalade); };
-                
+			if (stalas.Zaidziamos.Count != 0)
+			{
+				if (Tikrina(ka, stalas.Zaidziamos.Last()))
+				{
+					stalas.Padejo(ka);
+					Ranka.Remove(ka);
+					imti_po_dejimo(kalade);
+				}
+				else { return false; }
+
             }
             else { stalas.Padejo(ka); Ranka.Remove(ka); imti_po_dejimo(kalade);}
-            
+
+			return true;
         }
 
         public void imti_po_dejimo(Kalade kalade)
@@ -48,7 +55,7 @@ namespace cardgame
             }
             else
             {
-                //MessageBox.Show("nesvaik blt");
+                //MessageBox.Show("nesvaik");
                 
             }
 
@@ -66,10 +73,7 @@ namespace cardgame
                 //MessageBox.Show("tu rimtai dx?");
             }
         }
-        public void Deti_daugiau_kortu()
-        {
 
-        }
         public void Imti_3(Stalas stalas)
         {
 			if (stalas.Zaidziamos.Count > 2)
