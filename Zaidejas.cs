@@ -53,25 +53,19 @@ namespace cardgame
                 Ranka.AddRange(atverstos);
                 atverstos = null;
             }
-            else
-            {
-                //MessageBox.Show("nesvaik");
-                
-            }
-
         }
 
-        public void paimti_uzversta(int kuri)
+        public void paimti_uzversta(int einama)
         {
-            if ((atverstos == null) && (Ranka.Count() == 0))
-            {
-                Ranka.Add(uzverstos[kuri]);
-                uzverstos[kuri] = null;
-            }
-            else
-            {
-                //MessageBox.Show("tu rimtai dx?");
-            }
+
+			for (int i = 0; i < 3; i++)
+			{ 
+				if (uzverstos[i] != null  && (atverstos == null) && (Ranka.Count() == 0))
+				{
+					Ranka.Add(uzverstos[i]);
+					uzverstos[i] = null;
+				}
+			}
         }
 
         public void Imti_3(Stalas stalas)
