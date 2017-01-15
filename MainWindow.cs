@@ -15,7 +15,7 @@ public partial class MainWindow: Gtk.Window
 {
     
    
-	int kuri = 0, kieno_eile = 1, einama = 0,pries,po; //einama - tai ta kuri pasirinkta, bet nepadeta
+	int kuri = 0, kieno_eile = 1, einama = 0,pries,po,kiek_laimetoju=0; //einama - tai ta kuri pasirinkta, bet nepadeta
 	bool[] zaidzia_uzverstom;
 	bool[] kas_laimejo; 
     cardgame.Kalade Kalade = new cardgame.Kalade();
@@ -341,10 +341,7 @@ public partial class MainWindow: Gtk.Window
 					zaidzia_uzverstom[kieno_eile-1] = true;
 				}
 				refresh(kieno_eile);
-				if (pirmas.uzverstos.Count() == 0)
-				{
-					kas_laimejo[0] = true;
-				}
+				kas_laimejo_pralaimejo(1);
 				if (pries != po) { kuri = 1; kieno_eile++; AI();}
 
 			}
@@ -403,10 +400,7 @@ public partial class MainWindow: Gtk.Window
 			}
 			refresh(2);
 			kieno_eile = 3;
-			if (antras.uzverstos.Count() == 0)
-			{
-				kas_laimejo[1]=true;
-			}
+			kas_laimejo_pralaimejo(2);
 			AI();
 		} 
 		else if ((kieno_eile == 3)&& (kas_laimejo[kieno_eile - 1]==false))
@@ -458,10 +452,7 @@ public partial class MainWindow: Gtk.Window
 			}
 			refresh(3);
 			kieno_eile =4;
-			if (trecias.uzverstos.Count() == 0)
-			{
-				kas_laimejo[2] = true;
-			}
+			kas_laimejo_pralaimejo(3);
 			AI();
 		}
 		else if ((kieno_eile == 4)&&(kas_laimejo[kieno_eile-1]==false))
@@ -513,12 +504,57 @@ public partial class MainWindow: Gtk.Window
 			}
 			refresh(4);
 			kieno_eile = 1;
-			if (ketvirtas.uzverstos.Count() == 0)
-			{
-				kas_laimejo[3] = true;
-			}
+			kas_laimejo_pralaimejo(4);
 		}
 
+	}
+	void kas_laimejo_pralaimejo(int kieno_eile)
+	{
+		if (kieno_eile == 1)
+		{
+			if (pirmas.uzverstos.Count() == 0)
+			{
+				kas_laimejo[kieno_eile-1] = true;
+				kiek_laimetoju++;
+			}
+		}
+		else if (kieno_eile == 2)
+		{
+			if (antras.uzverstos.Count() == 0)
+			{
+				kas_laimejo[kieno_eile - 1] = true;
+				kiek_laimetoju++;
+			}
+		}
+		else if (kieno_eile == 3)
+		{
+			if (trecias.uzverstos.Count() == 0)
+			{
+				kas_laimejo[kieno_eile - 1] = true;
+				kiek_laimetoju++;
+			}
+		}
+		else if (kieno_eile == 4)
+		{
+			if (ketvirtas.uzverstos.Count() == 0)
+			{
+				kas_laimejo[kieno_eile - 1] = true;
+				kiek_laimetoju++;
+			}
+		}
+		if (kiek_laimetoju == 3)
+		{
+			for (int i = 0; i < 4; i++)
+			{
+				if (kas_laimejo[i] == false) 
+				{
+					MessageDialog md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, (i+1)+" zaidjas pralaimejo");
+					md.Run();
+					md.Destroy();
+					break;
+				}
+			}
+		}
 	}
 
 	protected void OnImti3Clicked(object sender, EventArgs e)
@@ -536,10 +572,8 @@ public partial class MainWindow: Gtk.Window
 
 	protected void OnImtiViskaClicked(object sender, EventArgs e)
 	{
-		pirmas.Imti_3(ant_stalo);
-		refresh(kieno_eile);
-
-		if (kieno_eile == 1)
+		
+		if ((kieno_eile == 1)&&(ant_stalo.Zaidziamos.Count!=0))
 		{
 			pirmas.imti_viska(ant_stalo);
 			refresh(kieno_eile);
