@@ -465,7 +465,6 @@ public partial class MainWindow: Gtk.Window
 			}
 			else
 			{
-				md.Destroy();
 				for (int i = 0; i < ketvirtas.Ranka.Count; i++)
 				{
 					if (ant_stalo.Zaidziamos.Count == 0)
