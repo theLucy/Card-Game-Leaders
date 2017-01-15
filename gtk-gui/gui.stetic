@@ -8,7 +8,7 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/Debug/cardgame.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="1064 1020">
+  <widget class="Gtk.Window" id="MainWindow" design-size="1015 912">
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -637,34 +637,6 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="Imti_viska">
-            <property name="MemberName" />
-            <property name="CanFocus">True</property>
-            <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Imti viska</property>
-            <property name="UseUnderline">True</property>
-            <signal name="Clicked" handler="OnImtiViskaClicked" />
-          </widget>
-          <packing>
-            <property name="X">740</property>
-            <property name="Y">720</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Button" id="imti_3">
-            <property name="MemberName" />
-            <property name="CanFocus">True</property>
-            <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Imti 3</property>
-            <property name="UseUnderline">True</property>
-            <signal name="Clicked" handler="OnImti3Clicked" />
-          </widget>
-          <packing>
-            <property name="X">748</property>
-            <property name="Y">760</property>
-          </packing>
-        </child>
-        <child>
           <widget class="Gtk.Image" id="zaidziamos">
             <property name="MemberName" />
           </widget>
@@ -852,6 +824,34 @@
           <packing>
             <property name="X">95</property>
             <property name="Y">63</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="Imti_viska">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Imti viska</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnImtiViskaClicked" />
+          </widget>
+          <packing>
+            <property name="X">717</property>
+            <property name="Y">556</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="imti_3">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Imti 3</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnImti3Clicked" />
+          </widget>
+          <packing>
+            <property name="X">719</property>
+            <property name="Y">601</property>
           </packing>
         </child>
       </widget>

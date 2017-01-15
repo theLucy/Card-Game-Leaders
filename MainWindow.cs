@@ -153,7 +153,7 @@ public partial class MainWindow: Gtk.Window
 					((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y += 20;
 				}
 			}
-			if (zaidzia_uzverstom[1]==true)
+			if (zaidzia_uzverstom[0]==true)
 			{
 				if (((Gtk.Fixed.FixedChild)(fixed1[pirmouzv1])).Y != 580){((Gtk.Fixed.FixedChild)(fixed1[pirmouzv1])).Y += 20;}
 				if (((Gtk.Fixed.FixedChild)(fixed1[pirmouzv2])).Y != 580) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv2])).Y += 20; }
@@ -267,11 +267,11 @@ public partial class MainWindow: Gtk.Window
 			if (args.Event.Key == Gdk.Key.Right)
 			{
 
-				if ((kuri < pirmas.Ranka.Count - 1) || (zaidzia_uzverstom[kieno_eile] == true))
+				if ((kuri < pirmas.Ranka.Count - 1) || (zaidzia_uzverstom[kieno_eile-1] == true))
 				{
 					sulygina(1);
 					kuri++;
-					if (zaidzia_uzverstom[kieno_eile] == true)
+					if (zaidzia_uzverstom[kieno_eile-1] == true)
 					{
 						if (kuri == 0) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv1])).Y -= 20; }
 						else if (kuri == 1) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv2])).Y -= 20; }
@@ -291,11 +291,11 @@ public partial class MainWindow: Gtk.Window
 			{
 
 
-				if ((kuri > 0) || (zaidzia_uzverstom[kieno_eile] == true))
+				if ((kuri > 0) || (zaidzia_uzverstom[kieno_eile-1] == true))
 				{
 					sulygina(1);
 					kuri--;
-					if (zaidzia_uzverstom[kieno_eile] == true)
+					if (zaidzia_uzverstom[kieno_eile-1] == true)
 					{
 						if (kuri == 0) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv1])).Y -= 20; }
 						else if (kuri == 1) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv2])).Y -= 20; }
@@ -313,10 +313,10 @@ public partial class MainWindow: Gtk.Window
 			else if (args.Event.Key == Gdk.Key.Down)
 			{
 				
-				if (zaidzia_uzverstom[kieno_eile] == true)
+				if (zaidzia_uzverstom[kieno_eile-1] == true)
 				{
 					pirmas.paimti_uzversta(einama); //viduje tikrina ar turi rankoje kortu, jei taip, nieko nedaro
-					zaidzia_uzverstom[kieno_eile] = false;
+					zaidzia_uzverstom[kieno_eile-1] = false;
 				}
 				refresh(kieno_eile);
 			}
@@ -336,7 +336,7 @@ public partial class MainWindow: Gtk.Window
 
 				if ((pirmas.atverstos == null) && (pirmas.Ranka.Count== 0))
 				{
-					zaidzia_uzverstom[kieno_eile] = true;
+					zaidzia_uzverstom[kieno_eile-1] = true;
 				}
 				refresh(kieno_eile);
 				if (pries != po) { kuri = 1; kieno_eile++; AI();}
@@ -351,7 +351,7 @@ public partial class MainWindow: Gtk.Window
 		if (kieno_eile == 2)
 		{
 			bool padejo = false;
-			if (zaidzia_uzverstom[kieno_eile] == true)
+			if (zaidzia_uzverstom[kieno_eile-1] == true)
 			{
 				antras.paimti_uzversta(0);
 				if ((antras.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte)|| (antras.Ranka[0].verte == 10) || (antras.Ranka[0].verte == 2))
@@ -393,7 +393,7 @@ public partial class MainWindow: Gtk.Window
 			antras.paimti_atverstas(Kalade);
 			if ((antras.atverstos == null) && (antras.Ranka.Count == 0))
 			{
-				zaidzia_uzverstom[kieno_eile] = true;
+				zaidzia_uzverstom[kieno_eile-1] = true;
 			}
 			refresh(2);
 			kieno_eile = 3;
@@ -402,7 +402,7 @@ public partial class MainWindow: Gtk.Window
 		else if (kieno_eile == 3)
 		{
 			bool padejo = false;
-			if (zaidzia_uzverstom[kieno_eile] == true)
+			if (zaidzia_uzverstom[kieno_eile-1] == true)
 			{
 				trecias.paimti_uzversta(0);
 				if ((trecias.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte) || (trecias.Ranka[0].verte == 10) || (trecias.Ranka[0].verte == 2))
@@ -444,23 +444,17 @@ public partial class MainWindow: Gtk.Window
 			trecias.paimti_atverstas(Kalade);
 			if ((trecias.atverstos == null) && (trecias.Ranka.Count == 0))
 			{
-				zaidzia_uzverstom[kieno_eile] = true;
+				zaidzia_uzverstom[kieno_eile-1] = true;
 			}
 			refresh(3);
-			kieno_eile =1;
-			//AI();
+			kieno_eile =4;
+			AI();
 		}
 		else if (kieno_eile == 4)
 		{
-			MessageDialog md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "l");
-			md.Run();
-			md.Destroy();
 			bool padejo = false;
-			if (zaidzia_uzverstom[kieno_eile] == true)
+			if (zaidzia_uzverstom[kieno_eile-1] == true)
 			{
-				 md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "l");
-				md.Run();
-				md.Destroy();
 				ketvirtas.paimti_uzversta(0);
 				if ((ketvirtas.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte) || (ketvirtas.Ranka[0].verte == 10) || (ketvirtas.Ranka[0].verte == 2))
 				{
@@ -471,8 +465,6 @@ public partial class MainWindow: Gtk.Window
 			}
 			else
 			{
-				 md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "l");
-				md.Run();
 				md.Destroy();
 				for (int i = 0; i < ketvirtas.Ranka.Count; i++)
 				{
@@ -485,9 +477,6 @@ public partial class MainWindow: Gtk.Window
 					}
 					else if ((ketvirtas.Ranka[i].verte >= ant_stalo.Zaidziamos.Last().verte) || (ketvirtas.Ranka[i].verte == 10) || (ketvirtas.Ranka[i].verte == 2))
 					{
-						 md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "l");
-						md.Run();
-						md.Destroy();
 						ketvirtas.Deti_viena_korta(ketvirtas.Ranka[i], ant_stalo, Kalade);
 						padejo = true;
 						Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
@@ -496,9 +485,6 @@ public partial class MainWindow: Gtk.Window
 
 				}
 			}
-			 md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "l");
-			md.Run();
-			md.Destroy();
 			if ((ant_stalo.Zaidziamos.Count > 3) && (padejo == false))
 			{
 				ketvirtas.Imti_3(ant_stalo);
@@ -510,7 +496,7 @@ public partial class MainWindow: Gtk.Window
 			ketvirtas.paimti_atverstas(Kalade);
 			if ((ketvirtas.atverstos == null) && (ketvirtas.Ranka.Count == 0))
 			{
-				zaidzia_uzverstom[kieno_eile] = true;
+				zaidzia_uzverstom[kieno_eile-1] = true;
 			}
 			refresh(4);
 			kieno_eile = 1;
