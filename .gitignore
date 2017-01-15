@@ -9,3 +9,6 @@ _ReSharper.*
 bin/
 obj/
 packages/
+
+#Mono IDE files:
+*.userprefs
