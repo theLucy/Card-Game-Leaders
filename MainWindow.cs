@@ -356,13 +356,17 @@ public partial class MainWindow: Gtk.Window
 			bool padejo = false;
 			if (zaidzia_uzverstom[kieno_eile-1] == true)
 			{
-				antras.paimti_uzversta(0);
-				if ((antras.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte)|| (antras.Ranka[0].verte == 10) || (antras.Ranka[0].verte == 2))
-				{
-					antras.Deti_viena_korta(antras.Ranka[0], ant_stalo, Kalade);
-					padejo = true;
+                antras.paimti_uzversta(0);
 
-				}
+                if (antras.Ranka[0] != null && ant_stalo.Zaidziamos.Count != 0)
+                {
+                    if ((antras.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte) || (antras.Ranka[0].verte == 10) || (antras.Ranka[0].verte == 2))
+                    {
+                        antras.Deti_viena_korta(antras.Ranka[0], ant_stalo, Kalade);
+                        padejo = true;
+
+                    }
+                }
 			}
 			else
 			{
@@ -409,12 +413,16 @@ public partial class MainWindow: Gtk.Window
 			if (zaidzia_uzverstom[kieno_eile-1] == true)
 			{
 				trecias.paimti_uzversta(0);
-				if ((trecias.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte) || (trecias.Ranka[0].verte == 10) || (trecias.Ranka[0].verte == 2))
-				{
-					trecias.Deti_viena_korta(trecias.Ranka[0], ant_stalo, Kalade);
-					padejo = true;
 
-				}
+                if (ant_stalo.Zaidziamos.Count != 0 && trecias.Ranka.Count != 0)
+                {
+                    if ((trecias.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte) || (trecias.Ranka[0].verte == 10) || (trecias.Ranka[0].verte == 2))
+                    {
+                        trecias.Deti_viena_korta(trecias.Ranka[0], ant_stalo, Kalade);
+                        padejo = true;
+
+                    }
+                }
 			}
 			else
 			{
@@ -461,12 +469,15 @@ public partial class MainWindow: Gtk.Window
 			if (zaidzia_uzverstom[kieno_eile-1] == true)
 			{
 				ketvirtas.paimti_uzversta(0);
-				if ((ketvirtas.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte) || (ketvirtas.Ranka[0].verte == 10) || (ketvirtas.Ranka[0].verte == 2))
-				{
-					ketvirtas.Deti_viena_korta(ketvirtas.Ranka[0], ant_stalo, Kalade);
-					padejo = true;
+                if (ant_stalo.Zaidziamos.Count != 0 && ketvirtas.Ranka.Count != 0)
+                {
+                    if ((ketvirtas.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte) || (ketvirtas.Ranka[0].verte == 10) || (ketvirtas.Ranka[0].verte == 2))
+                    {
+                        ketvirtas.Deti_viena_korta(ketvirtas.Ranka[0], ant_stalo, Kalade);
+                        padejo = true;
 
-				}
+                    }
+                }
 			}
 			else
 			{
