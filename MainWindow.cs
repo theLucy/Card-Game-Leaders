@@ -233,7 +233,7 @@ public partial class MainWindow: Gtk.Window
 				trec[i].Pixbuf = null;
 			}
 		}
-		else if (kurio == 2)
+		else if (kurio == 4)
 		{
 			if (ketvirtas.atverstos == null)
 			{
