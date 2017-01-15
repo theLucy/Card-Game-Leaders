@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.IO;
 using cardgame;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Threading;
 
 public partial class MainWindow: Gtk.Window
 {
@@ -54,10 +55,10 @@ public partial class MainWindow: Gtk.Window
 	{
 		zaidzia_uzverstom = new bool[] { false, false, false, false };
 
-		pir = new Gtk.Image[] { pir1, pir2, pir3, pir4, pir5, pir6, pir7, pir8, pir9, pir10, pir11, pir12, pir13, pir14, pir15 };
-		antr = new Gtk.Image[] { antr1, antr2, antr3, antr4, antr5, antr6, antr7, antr8, antr9, antr10, antr11, antr12, antr13, antr14, antr15 };
-		trec = new Gtk.Image[] { trec1, trec2, trec3, trec4, trec5, trec6, trec7, trec8, trec9, trec10, trec11, trec12, trec13, trec14, trec15 };
-		ketv = new Gtk.Image[] { ketv1, ketv2, ketv3, ketv4, ketv5, ketv6, ketv7, ketv8, ketv9, ketv10, ketv11, ketv12, ketv13, ketv14, ketv15 };
+		pir = new Gtk.Image[] { pir1, pir2, pir3, pir4, pir5, pir6, pir7, pir8, pir9, pir10, pir11, pir12, pir13, pir14, pir15, pir16, pir17, pir8, pir19, pir20 };
+		antr = new Gtk.Image[] { antr1, antr2, antr3, antr4, antr5, antr6, antr7, antr8, antr9, antr10, antr11, antr12, antr13, antr14, antr15, antr16, antr17, antr18, antr19, antr20, antr21, antr22, antr23, antr24, antr25, antr26, antr27, antr28, antr29, antr30};
+		trec = new Gtk.Image[] { trec1, trec2, trec3, trec4, trec5, trec6, trec7, trec8, trec9, trec10, trec11, trec12, trec13, trec14, trec15, trec16, trec17, trec18, trec19, trec20, trec21, trec22, trec23, trec24, trec25, trec26, trec27, trec28, trec29, trec30 };
+		ketv = new Gtk.Image[] { ketv1, ketv2, ketv3, ketv4, ketv5, ketv6, ketv7, ketv8, ketv9, ketv10, ketv11, ketv12, ketv13, ketv14, ketv15, ketv16, ketv17, ketv18, ketv19, ketv20, ketv21, ketv22, ketv23, ketv24, ketv25, ketv26, ketv27, ketv28, ketv29, ketv30 };
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
@@ -398,6 +399,7 @@ public partial class MainWindow: Gtk.Window
 			}
 			refresh(2);
 			kieno_eile = 3;
+			Thread.Sleep(300);
 			AI();
 		} 
 		else if (kieno_eile == 3)
@@ -449,6 +451,7 @@ public partial class MainWindow: Gtk.Window
 			}
 			refresh(3);
 			kieno_eile =4;
+			Thread.Sleep(300);
 			AI();
 		}
 		else if (kieno_eile == 4)
@@ -500,6 +503,7 @@ public partial class MainWindow: Gtk.Window
 			}
 			refresh(4);
 			kieno_eile = 1;
+			Thread.Sleep(300);
 		}
 
 	}
