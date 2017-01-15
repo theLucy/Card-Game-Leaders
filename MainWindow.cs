@@ -17,6 +17,7 @@ public partial class MainWindow: Gtk.Window
    
 	int kuri = 0, kieno_eile = 1, einama = 0,pries,po; //einama - tai ta kuri pasirinkta, bet nepadeta
 	bool[] zaidzia_uzverstom;
+	bool[] kas_laimejo; 
     cardgame.Kalade Kalade = new cardgame.Kalade();
     cardgame.Zaidejas pirmas = new cardgame.Zaidejas();
     cardgame.Zaidejas antras = new cardgame.Zaidejas();
@@ -54,7 +55,7 @@ public partial class MainWindow: Gtk.Window
 	void priskiria_img()
 	{
 		zaidzia_uzverstom = new bool[] { false, false, false, false };
-
+		kas_laimejo = new bool[] { false, false, false, false };
 		pir = new Gtk.Image[] { pir1, pir2, pir3, pir4, pir5, pir6, pir7, pir8, pir9, pir10, pir11, pir12, pir13, pir14, pir15, pir16, pir17, pir8, pir19, pir20 };
 		antr = new Gtk.Image[] { antr1, antr2, antr3, antr4, antr5, antr6, antr7, antr8, antr9, antr10, antr11, antr12, antr13, antr14, antr15, antr16, antr17, antr18, antr19, antr20, antr21, antr22, antr23, antr24, antr25, antr26, antr27, antr28, antr29, antr30};
 		trec = new Gtk.Image[] { trec1, trec2, trec3, trec4, trec5, trec6, trec7, trec8, trec9, trec10, trec11, trec12, trec13, trec14, trec15, trec16, trec17, trec18, trec19, trec20, trec21, trec22, trec23, trec24, trec25, trec26, trec27, trec28, trec29, trec30 };
@@ -262,7 +263,7 @@ public partial class MainWindow: Gtk.Window
 	protected void KeyPress(object sender, KeyPressEventArgs args)
 	{
 		//Console.WriteLine(args.Event.Key);
-		if (kieno_eile == 1)
+		if ((kieno_eile == 1)&&(kas_laimejo[kieno_eile-1]==false))
 		{
 
 			if (args.Event.Key == Gdk.Key.Right)
@@ -340,7 +341,10 @@ public partial class MainWindow: Gtk.Window
 					zaidzia_uzverstom[kieno_eile-1] = true;
 				}
 				refresh(kieno_eile);
-
+				if (pirmas.uzverstos.Count() == 0)
+				{
+					kas_laimejo[0] = true;
+				}
 				if (pries != po) { kuri = 1; kieno_eile++; AI();}
 
 			}
@@ -350,7 +354,7 @@ public partial class MainWindow: Gtk.Window
 	void AI()
 	{
 		
-		if (kieno_eile == 2)
+		if ((kieno_eile == 2)&& (kas_laimejo[kieno_eile - 1]==false))
 		{
 			bool padejo = false;
 			if (zaidzia_uzverstom[kieno_eile-1] == true)
@@ -399,10 +403,13 @@ public partial class MainWindow: Gtk.Window
 			}
 			refresh(2);
 			kieno_eile = 3;
-			Thread.Sleep(300);
+			if (antras.uzverstos.Count() == 0)
+			{
+				kas_laimejo[1]=true;
+			}
 			AI();
 		} 
-		else if (kieno_eile == 3)
+		else if ((kieno_eile == 3)&& (kas_laimejo[kieno_eile - 1]==false))
 		{
 			bool padejo = false;
 			if (zaidzia_uzverstom[kieno_eile-1] == true)
@@ -451,10 +458,13 @@ public partial class MainWindow: Gtk.Window
 			}
 			refresh(3);
 			kieno_eile =4;
-			Thread.Sleep(300);
+			if (trecias.uzverstos.Count() == 0)
+			{
+				kas_laimejo[2] = true;
+			}
 			AI();
 		}
-		else if (kieno_eile == 4)
+		else if ((kieno_eile == 4)&&(kas_laimejo[kieno_eile-1]==false))
 		{
 			bool padejo = false;
 			if (zaidzia_uzverstom[kieno_eile-1] == true)
@@ -503,7 +513,10 @@ public partial class MainWindow: Gtk.Window
 			}
 			refresh(4);
 			kieno_eile = 1;
-			Thread.Sleep(300);
+			if (ketvirtas.uzverstos.Count() == 0)
+			{
+				kas_laimejo[3] = true;
+			}
 		}
 
 	}
