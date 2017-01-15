@@ -54,10 +54,10 @@ public partial class MainWindow: Gtk.Window
 	{
 		zaidzia_uzverstom = new bool[] { false, false, false, false };
 
-		pir = new Gtk.Image[] { pir1, pir2, pir3, pir4, pir5, pir6, pir7, pir8, pir9, pir10, pir11,pir12, pir13, pir14, pir15 };
+		pir = new Gtk.Image[] { pir1, pir2, pir3, pir4, pir5, pir6, pir7, pir8, pir9, pir10, pir11, pir12, pir13, pir14, pir15 };
 		antr = new Gtk.Image[] { antr1, antr2, antr3, antr4, antr5, antr6, antr7, antr8, antr9, antr10, antr11, antr12, antr13, antr14, antr15 };
-		trec = new Gtk.Image[] { trec1, trec2, trec3, trec4, trec5, trec6, trec7 };
-		ketv = new Gtk.Image[] { ketv1, ketv2, ketv3, ketv4, ketv5, ketv6, ketv7 };
+		trec = new Gtk.Image[] { trec1, trec2, trec3, trec4, trec5, trec6, trec7, trec8, trec9, trec10, trec11, trec12, trec13, trec14, trec15 };
+		ketv = new Gtk.Image[] { ketv1, ketv2, ketv3, ketv4, ketv5, ketv6, ketv7, ketv8, ketv9, ketv10, ketv11, ketv12, ketv13, ketv14, ketv15 };
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
@@ -133,11 +133,7 @@ public partial class MainWindow: Gtk.Window
 			trec[i].Pixbuf = trecias.Ranka[i].pav.Pixbuf;
 			ketv[i].Pixbuf = ketvirtas.Ranka[i].pav.Pixbuf;*/
 			pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf;
-			//antr[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
-			antr[i].Pixbuf = antras.Ranka[i].pav.Pixbuf;
-			antrouzv1.Pixbuf = antras.uzverstos[0].pav.Pixbuf;
-			antrouzv2.Pixbuf = antras.uzverstos[1].pav.Pixbuf;
-			antrouzv3.Pixbuf = antras.uzverstos[2].pav.Pixbuf;
+			antr[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
 			trec[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
 			ketv[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
 		}
@@ -170,7 +166,7 @@ public partial class MainWindow: Gtk.Window
 	void refresh(int kurio)
 	{
 		if (Kalade.Kortos.Count != 0) { GUIkalade.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png"); }
-		else { GUIkalade.Pixbuf = null;}
+		else { GUIkalade.Pixbuf = null; }
 		if (ant_stalo.Zaidziamos.Count != 0) { zaidziamos.Pixbuf = ant_stalo.Zaidziamos.Last().pav.Pixbuf; }
 		else { zaidziamos.Pixbuf = null; }
 
@@ -197,18 +193,66 @@ public partial class MainWindow: Gtk.Window
 		}
 		else if (kurio == 2)
 		{
-			for (int i = 0; i < antras.Ranka.Count; i++)
+			if (antras.atverstos == null)
 			{
-				antr[i].Pixbuf = antras.Ranka[i].pav.Pixbuf;
+				antroatv1.Pixbuf = null;
+				antroatv2.Pixbuf = null;
+				antroatv3.Pixbuf = null;
+			}
+			if (antras.uzverstos[0] == null) { antrouzv1.Pixbuf = null; }
+			if (antras.uzverstos[1] == null) { antrouzv2.Pixbuf = null; }
+			if (antras.uzverstos[2] == null) { antrouzv3.Pixbuf = null; }
+			for (int i = 0; i < 6; i++)
+			{
+				antr[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
 
 			}
 			for (int i = antras.Ranka.Count; i < 15; i++)
 			{
 				antr[i].Pixbuf = null;
 			}
-			MessageDialog md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, antras.Ranka.Count.ToString());
-			md.Run();
-			md.Destroy();
+		}
+		else if (kurio == 3)
+		{
+			if (trecias.atverstos == null)
+			{
+				trecioatv1.Pixbuf = null;
+				trecioatv2.Pixbuf = null;
+				trecioatv3.Pixbuf = null;
+			}
+			if (trecias.uzverstos[0] == null) { treciouzv1.Pixbuf = null; }
+			if (trecias.uzverstos[1] == null) { treciouzv2.Pixbuf = null; }
+			if (trecias.uzverstos[2] == null) { treciouzv3.Pixbuf = null; }
+			for (int i = 0; i < trecias.Ranka.Count; i++)
+			{
+				trec[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+
+			}
+			for (int i = trecias.Ranka.Count; i < 6; i++)
+			{
+				trec[i].Pixbuf = null;
+			}
+		}
+		else if (kurio == 2)
+		{
+			if (ketvirtas.atverstos == null)
+			{
+				ketvirtoatv1.Pixbuf = null;
+				ketvirtoatv2.Pixbuf = null;
+				ketvirtoatv3.Pixbuf = null;
+			}
+			if (ketvirtas.uzverstos[0] == null) { ketvirtouzv1.Pixbuf = null; }
+			if (ketvirtas.uzverstos[1] == null) { ketvirtouzv2.Pixbuf = null; }
+			if (ketvirtas.uzverstos[2] == null) { ketvirtouzv3.Pixbuf = null; }
+			for (int i = 0; i < ketvirtas.Ranka.Count; i++)
+			{
+				ketv[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+
+			}
+			for (int i = ketvirtas.Ranka.Count; i < 6; i++)
+			{
+				ketv[i].Pixbuf = null;
+			}
 		}
 
 
@@ -403,7 +447,7 @@ public partial class MainWindow: Gtk.Window
 				zaidzia_uzverstom[kieno_eile] = true;
 			}
 			refresh(3);
-			kieno_eile =4;
+			kieno_eile =1;
 			//AI();
 		}
 		else if (kieno_eile == 4)
