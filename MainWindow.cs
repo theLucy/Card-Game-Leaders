@@ -207,6 +207,10 @@ public partial class MainWindow: Gtk.Window
 				antr[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
 
 			}
+			for (int i = antras.Ranka.Count; i < 15; i++)
+			{
+				antr[i].Pixbuf = null;
+			}
 		}
 		else if (kurio == 3)
 		{
@@ -224,6 +228,10 @@ public partial class MainWindow: Gtk.Window
 				trec[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
 
 			}
+			for (int i = trecias.Ranka.Count; i < 15; i++)
+			{
+				trec[i].Pixbuf = null;
+			}
 		}
 		else if (kurio == 4)
 		{
@@ -240,6 +248,10 @@ public partial class MainWindow: Gtk.Window
 			{
 				ketv[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
 
+			}
+			for (int i = ketvirtas.Ranka.Count; i < 15; i++)
+			{
+				ketv[i].Pixbuf = null;
 			}
 		}
 
