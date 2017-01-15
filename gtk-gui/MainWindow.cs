@@ -155,6 +155,24 @@ public partial class MainWindow
 
 	private global::Gtk.Button imti_3;
 
+	private global::Gtk.Image trec9;
+
+	private global::Gtk.Image trec8;
+
+	private global::Gtk.Image trec10;
+
+	private global::Gtk.Image trec11;
+
+	private global::Gtk.Image trec12;
+
+	private global::Gtk.Image trec13;
+
+	private global::Gtk.Image trec14;
+
+	private global::Gtk.Image trec15;
+
+	private global::Gtk.Image ketv18;
+
 	private global::Gtk.Image ketv8;
 
 	private global::Gtk.Image ketv9;
@@ -171,21 +189,33 @@ public partial class MainWindow
 
 	private global::Gtk.Image ketv15;
 
-	private global::Gtk.Image trec9;
+	private global::Gtk.Image ketv16;
 
-	private global::Gtk.Image trec8;
+	private global::Gtk.Image ketv17;
 
-	private global::Gtk.Image trec10;
+	private global::Gtk.Image ketv19;
 
-	private global::Gtk.Image trec11;
+	private global::Gtk.Image ketv20;
 
-	private global::Gtk.Image trec12;
+	private global::Gtk.Image ketv21;
 
-	private global::Gtk.Image trec13;
+	private global::Gtk.Image ketv22;
 
-	private global::Gtk.Image trec14;
+	private global::Gtk.Image ketv23;
 
-	private global::Gtk.Image trec15;
+	private global::Gtk.Image ketv24;
+
+	private global::Gtk.Image ketv25;
+
+	private global::Gtk.Image ketv26;
+
+	private global::Gtk.Image ketv27;
+
+	private global::Gtk.Image ketv28;
+
+	private global::Gtk.Image ketv29;
+
+	private global::Gtk.Image ketv30;
 
 	protected virtual void Build()
 	{
@@ -737,117 +767,222 @@ public partial class MainWindow
 		w75.X = 719;
 		w75.Y = 601;
 		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.ketv8 = new global::Gtk.Image();
-		this.ketv8.Name = "ketv8";
-		this.fixed1.Add(this.ketv8);
-		global::Gtk.Fixed.FixedChild w76 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv8]));
-		w76.X = 68;
-		w76.Y = 583;
-		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.ketv9 = new global::Gtk.Image();
-		this.ketv9.Name = "ketv9";
-		this.fixed1.Add(this.ketv9);
-		global::Gtk.Fixed.FixedChild w77 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv9]));
-		w77.X = 71;
-		w77.Y = 585;
-		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.ketv10 = new global::Gtk.Image();
-		this.ketv10.Name = "ketv10";
-		this.fixed1.Add(this.ketv10);
-		global::Gtk.Fixed.FixedChild w78 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv10]));
-		w78.X = 77;
-		w78.Y = 583;
-		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.ketv11 = new global::Gtk.Image();
-		this.ketv11.Name = "ketv11";
-		this.fixed1.Add(this.ketv11);
-		global::Gtk.Fixed.FixedChild w79 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv11]));
-		w79.X = 74;
-		w79.Y = 586;
-		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.ketv12 = new global::Gtk.Image();
-		this.ketv12.Name = "ketv12";
-		this.fixed1.Add(this.ketv12);
-		global::Gtk.Fixed.FixedChild w80 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv12]));
-		w80.X = 76;
-		w80.Y = 584;
-		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.ketv13 = new global::Gtk.Image();
-		this.ketv13.Name = "ketv13";
-		this.fixed1.Add(this.ketv13);
-		global::Gtk.Fixed.FixedChild w81 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv13]));
-		w81.X = 77;
-		w81.Y = 585;
-		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.ketv14 = new global::Gtk.Image();
-		this.ketv14.Name = "ketv14";
-		this.fixed1.Add(this.ketv14);
-		global::Gtk.Fixed.FixedChild w82 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv14]));
-		w82.X = 60;
-		w82.Y = 578;
-		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.ketv15 = new global::Gtk.Image();
-		this.ketv15.Name = "ketv15";
-		this.fixed1.Add(this.ketv15);
-		global::Gtk.Fixed.FixedChild w83 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv15]));
-		w83.X = 65;
-		w83.Y = 584;
-		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.trec9 = new global::Gtk.Image();
 		this.trec9.Name = "trec9";
 		this.fixed1.Add(this.trec9);
-		global::Gtk.Fixed.FixedChild w84 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec9]));
-		w84.X = 39;
-		w84.Y = 27;
+		global::Gtk.Fixed.FixedChild w76 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec9]));
+		w76.X = 39;
+		w76.Y = 27;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.trec8 = new global::Gtk.Image();
 		this.trec8.Name = "trec8";
 		this.fixed1.Add(this.trec8);
-		global::Gtk.Fixed.FixedChild w85 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec8]));
-		w85.X = 36;
-		w85.Y = 28;
+		global::Gtk.Fixed.FixedChild w77 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec8]));
+		w77.X = 36;
+		w77.Y = 28;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.trec10 = new global::Gtk.Image();
 		this.trec10.Name = "trec10";
 		this.fixed1.Add(this.trec10);
-		global::Gtk.Fixed.FixedChild w86 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec10]));
-		w86.X = 40;
-		w86.Y = 32;
+		global::Gtk.Fixed.FixedChild w78 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec10]));
+		w78.X = 40;
+		w78.Y = 32;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.trec11 = new global::Gtk.Image();
 		this.trec11.Name = "trec11";
 		this.fixed1.Add(this.trec11);
-		global::Gtk.Fixed.FixedChild w87 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec11]));
-		w87.X = 43;
-		w87.Y = 36;
+		global::Gtk.Fixed.FixedChild w79 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec11]));
+		w79.X = 43;
+		w79.Y = 36;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.trec12 = new global::Gtk.Image();
 		this.trec12.Name = "trec12";
 		this.fixed1.Add(this.trec12);
-		global::Gtk.Fixed.FixedChild w88 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec12]));
-		w88.X = 38;
-		w88.Y = 35;
+		global::Gtk.Fixed.FixedChild w80 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec12]));
+		w80.X = 38;
+		w80.Y = 35;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.trec13 = new global::Gtk.Image();
 		this.trec13.Name = "trec13";
 		this.fixed1.Add(this.trec13);
-		global::Gtk.Fixed.FixedChild w89 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec13]));
-		w89.X = 35;
-		w89.Y = 40;
+		global::Gtk.Fixed.FixedChild w81 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec13]));
+		w81.X = 35;
+		w81.Y = 40;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.trec14 = new global::Gtk.Image();
 		this.trec14.Name = "trec14";
 		this.fixed1.Add(this.trec14);
-		global::Gtk.Fixed.FixedChild w90 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec14]));
-		w90.X = 53;
-		w90.Y = 39;
+		global::Gtk.Fixed.FixedChild w82 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec14]));
+		w82.X = 53;
+		w82.Y = 39;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.trec15 = new global::Gtk.Image();
 		this.trec15.Name = "trec15";
 		this.fixed1.Add(this.trec15);
-		global::Gtk.Fixed.FixedChild w91 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec15]));
-		w91.X = 48;
-		w91.Y = 41;
+		global::Gtk.Fixed.FixedChild w83 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.trec15]));
+		w83.X = 48;
+		w83.Y = 41;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv18 = new global::Gtk.Image();
+		this.ketv18.Name = "ketv18";
+		this.fixed1.Add(this.ketv18);
+		global::Gtk.Fixed.FixedChild w84 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv18]));
+		w84.X = 46;
+		w84.Y = 571;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv8 = new global::Gtk.Image();
+		this.ketv8.Name = "ketv8";
+		this.fixed1.Add(this.ketv8);
+		global::Gtk.Fixed.FixedChild w85 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv8]));
+		w85.X = 54;
+		w85.Y = 569;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv9 = new global::Gtk.Image();
+		this.ketv9.Name = "ketv9";
+		this.fixed1.Add(this.ketv9);
+		global::Gtk.Fixed.FixedChild w86 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv9]));
+		w86.X = 50;
+		w86.Y = 570;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv10 = new global::Gtk.Image();
+		this.ketv10.Name = "ketv10";
+		this.fixed1.Add(this.ketv10);
+		global::Gtk.Fixed.FixedChild w87 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv10]));
+		w87.X = 50;
+		w87.Y = 578;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv11 = new global::Gtk.Image();
+		this.ketv11.Name = "ketv11";
+		this.fixed1.Add(this.ketv11);
+		global::Gtk.Fixed.FixedChild w88 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv11]));
+		w88.X = 49;
+		w88.Y = 580;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv12 = new global::Gtk.Image();
+		this.ketv12.Name = "ketv12";
+		this.fixed1.Add(this.ketv12);
+		global::Gtk.Fixed.FixedChild w89 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv12]));
+		w89.X = 50;
+		w89.Y = 578;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv13 = new global::Gtk.Image();
+		this.ketv13.Name = "ketv13";
+		this.fixed1.Add(this.ketv13);
+		global::Gtk.Fixed.FixedChild w90 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv13]));
+		w90.X = 50;
+		w90.Y = 582;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv14 = new global::Gtk.Image();
+		this.ketv14.Name = "ketv14";
+		this.fixed1.Add(this.ketv14);
+		global::Gtk.Fixed.FixedChild w91 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv14]));
+		w91.X = 51;
+		w91.Y = 579;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv15 = new global::Gtk.Image();
+		this.ketv15.Name = "ketv15";
+		this.fixed1.Add(this.ketv15);
+		global::Gtk.Fixed.FixedChild w92 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv15]));
+		w92.X = 65;
+		w92.Y = 582;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv16 = new global::Gtk.Image();
+		this.ketv16.Name = "ketv16";
+		this.fixed1.Add(this.ketv16);
+		global::Gtk.Fixed.FixedChild w93 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv16]));
+		w93.X = 60;
+		w93.Y = 582;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv17 = new global::Gtk.Image();
+		this.ketv17.Name = "ketv17";
+		this.fixed1.Add(this.ketv17);
+		global::Gtk.Fixed.FixedChild w94 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv17]));
+		w94.X = 83;
+		w94.Y = 576;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv19 = new global::Gtk.Image();
+		this.ketv19.Name = "ketv19";
+		this.fixed1.Add(this.ketv19);
+		global::Gtk.Fixed.FixedChild w95 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv19]));
+		w95.X = 52;
+		w95.Y = 597;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv20 = new global::Gtk.Image();
+		this.ketv20.Name = "ketv20";
+		this.fixed1.Add(this.ketv20);
+		global::Gtk.Fixed.FixedChild w96 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv20]));
+		w96.X = 62;
+		w96.Y = 601;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv21 = new global::Gtk.Image();
+		this.ketv21.Name = "ketv21";
+		this.fixed1.Add(this.ketv21);
+		global::Gtk.Fixed.FixedChild w97 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv21]));
+		w97.X = 62;
+		w97.Y = 588;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv22 = new global::Gtk.Image();
+		this.ketv22.Name = "ketv22";
+		this.fixed1.Add(this.ketv22);
+		global::Gtk.Fixed.FixedChild w98 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv22]));
+		w98.X = 66;
+		w98.Y = 608;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv23 = new global::Gtk.Image();
+		this.ketv23.Name = "ketv23";
+		this.fixed1.Add(this.ketv23);
+		global::Gtk.Fixed.FixedChild w99 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv23]));
+		w99.X = 71;
+		w99.Y = 609;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv24 = new global::Gtk.Image();
+		this.ketv24.Name = "ketv24";
+		this.fixed1.Add(this.ketv24);
+		global::Gtk.Fixed.FixedChild w100 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv24]));
+		w100.X = 70;
+		w100.Y = 603;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv25 = new global::Gtk.Image();
+		this.ketv25.Name = "ketv25";
+		this.fixed1.Add(this.ketv25);
+		global::Gtk.Fixed.FixedChild w101 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv25]));
+		w101.X = 61;
+		w101.Y = 600;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv26 = new global::Gtk.Image();
+		this.ketv26.Name = "ketv26";
+		this.fixed1.Add(this.ketv26);
+		global::Gtk.Fixed.FixedChild w102 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv26]));
+		w102.X = 65;
+		w102.Y = 609;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv27 = new global::Gtk.Image();
+		this.ketv27.Name = "ketv27";
+		this.fixed1.Add(this.ketv27);
+		global::Gtk.Fixed.FixedChild w103 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv27]));
+		w103.X = 69;
+		w103.Y = 618;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv28 = new global::Gtk.Image();
+		this.ketv28.Name = "ketv28";
+		this.fixed1.Add(this.ketv28);
+		global::Gtk.Fixed.FixedChild w104 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv28]));
+		w104.X = 64;
+		w104.Y = 615;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv29 = new global::Gtk.Image();
+		this.ketv29.Name = "ketv29";
+		this.fixed1.Add(this.ketv29);
+		global::Gtk.Fixed.FixedChild w105 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv29]));
+		w105.X = 63;
+		w105.Y = 604;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.ketv30 = new global::Gtk.Image();
+		this.ketv30.Name = "ketv30";
+		this.fixed1.Add(this.ketv30);
+		global::Gtk.Fixed.FixedChild w106 = ((global::Gtk.Fixed.FixedChild)(this.fixed1[this.ketv30]));
+		w106.X = 61;
+		w106.Y = 625;
 		this.Add(this.fixed1);
 		if ((this.Child != null))
 		{
@@ -863,14 +998,6 @@ public partial class MainWindow
 		this.antr7.Hide();
 		this.antr15.Hide();
 		this.antr13.Hide();
-		this.ketv8.Hide();
-		this.ketv9.Hide();
-		this.ketv10.Hide();
-		this.ketv11.Hide();
-		this.ketv12.Hide();
-		this.ketv13.Hide();
-		this.ketv14.Hide();
-		this.ketv15.Hide();
 		this.trec9.Hide();
 		this.trec8.Hide();
 		this.trec10.Hide();
@@ -879,6 +1006,28 @@ public partial class MainWindow
 		this.trec13.Hide();
 		this.trec14.Hide();
 		this.trec15.Hide();
+		this.ketv18.Hide();
+		this.ketv8.Hide();
+		this.ketv9.Hide();
+		this.ketv10.Hide();
+		this.ketv11.Hide();
+		this.ketv12.Hide();
+		this.ketv13.Hide();
+		this.ketv14.Hide();
+		this.ketv15.Hide();
+		this.ketv16.Hide();
+		this.ketv17.Hide();
+		this.ketv19.Hide();
+		this.ketv20.Hide();
+		this.ketv21.Hide();
+		this.ketv22.Hide();
+		this.ketv24.Hide();
+		this.ketv25.Hide();
+		this.ketv26.Hide();
+		this.ketv27.Hide();
+		this.ketv28.Hide();
+		this.ketv29.Hide();
+		this.ketv30.Hide();
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 		this.button2.Clicked += new global::System.EventHandler(this.OnButton2Clicked);

@@ -339,6 +339,7 @@ public partial class MainWindow: Gtk.Window
 					zaidzia_uzverstom[kieno_eile-1] = true;
 				}
 				refresh(kieno_eile);
+
 				if (pries != po) { kuri = 1; kieno_eile++; AI();}
 
 			}

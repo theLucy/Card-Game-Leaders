@@ -719,86 +719,6 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Image" id="ketv8">
-            <property name="MemberName" />
-            <property name="Visible">False</property>
-          </widget>
-          <packing>
-            <property name="X">68</property>
-            <property name="Y">583</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Image" id="ketv9">
-            <property name="MemberName" />
-            <property name="Visible">False</property>
-          </widget>
-          <packing>
-            <property name="X">71</property>
-            <property name="Y">585</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Image" id="ketv10">
-            <property name="MemberName" />
-            <property name="Visible">False</property>
-          </widget>
-          <packing>
-            <property name="X">77</property>
-            <property name="Y">583</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Image" id="ketv11">
-            <property name="MemberName" />
-            <property name="Visible">False</property>
-          </widget>
-          <packing>
-            <property name="X">74</property>
-            <property name="Y">586</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Image" id="ketv12">
-            <property name="MemberName" />
-            <property name="Visible">False</property>
-          </widget>
-          <packing>
-            <property name="X">76</property>
-            <property name="Y">584</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Image" id="ketv13">
-            <property name="MemberName" />
-            <property name="Visible">False</property>
-          </widget>
-          <packing>
-            <property name="X">77</property>
-            <property name="Y">585</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Image" id="ketv14">
-            <property name="MemberName" />
-            <property name="Visible">False</property>
-          </widget>
-          <packing>
-            <property name="X">60</property>
-            <property name="Y">578</property>
-          </packing>
-        </child>
-        <child>
-          <widget class="Gtk.Image" id="ketv15">
-            <property name="MemberName" />
-            <property name="Visible">False</property>
-          </widget>
-          <packing>
-            <property name="X">65</property>
-            <property name="Y">584</property>
-          </packing>
-        </child>
-        <child>
           <widget class="Gtk.Image" id="trec9">
             <property name="MemberName" />
             <property name="Visible">False</property>
@@ -876,6 +796,235 @@
           <packing>
             <property name="X">48</property>
             <property name="Y">41</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv18">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">46</property>
+            <property name="Y">571</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv8">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">54</property>
+            <property name="Y">569</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv9">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">50</property>
+            <property name="Y">570</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv10">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">50</property>
+            <property name="Y">578</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv11">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">49</property>
+            <property name="Y">580</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv12">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">50</property>
+            <property name="Y">578</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv13">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">50</property>
+            <property name="Y">582</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv14">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">51</property>
+            <property name="Y">579</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv15">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">65</property>
+            <property name="Y">582</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv16">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">60</property>
+            <property name="Y">582</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv17">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">83</property>
+            <property name="Y">576</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv19">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">52</property>
+            <property name="Y">597</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv20">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">62</property>
+            <property name="Y">601</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv21">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">62</property>
+            <property name="Y">588</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv22">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">66</property>
+            <property name="Y">608</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv23">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="X">71</property>
+            <property name="Y">609</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv24">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">70</property>
+            <property name="Y">603</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv25">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">61</property>
+            <property name="Y">600</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv26">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">65</property>
+            <property name="Y">609</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv27">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">69</property>
+            <property name="Y">618</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv28">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">64</property>
+            <property name="Y">615</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv29">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">63</property>
+            <property name="Y">604</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Image" id="ketv30">
+            <property name="MemberName" />
+            <property name="Visible">False</property>
+          </widget>
+          <packing>
+            <property name="X">61</property>
+            <property name="Y">625</property>
           </packing>
         </child>
       </widget>
