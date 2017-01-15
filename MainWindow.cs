@@ -35,14 +35,15 @@ public partial class MainWindow: Gtk.Window
 	{
         //vietoj konteineriu uzmeciau fixed grida, kad butu galima su pixeliais dirbt;
 		Build ();
+		Imti_viska.Hide();
+		imti_3.Hide();
 		KeyPressEvent += KeyPress;
 
 		priskiria_img();
-		w1 = ((Gtk.Fixed.FixedChild)(this.fixed1[this.button1]));
+
 
         
-        label3.Text = "butono koordinates: " + w1.X.ToString() + " " + w1.Y.ToString();
-
+      
 
 		visi = new cardgame.Zaidejas[] { pirmas, antras, trecias, ketvirtas, penktas };
 
@@ -69,9 +70,7 @@ public partial class MainWindow: Gtk.Window
     {
 
 
-        label4.Text = trecias.Ranka[0].tipas.ToString() + " " + trecias.Ranka[0].verte.ToString() + "|"+
-             trecias.Ranka[1].tipas.ToString() + " " + trecias.Ranka[1].verte.ToString() + "|" +
-              trecias.Ranka[2].tipas.ToString() + " " + trecias.Ranka[2].verte.ToString();
+     
 		/*MessageDialog md = new MessageDialog (this, DialogFlags.DestroyWithParent,MessageType.Info,ButtonsType.Ok, "l");
         md.Run ();
         md.Destroy();*/
@@ -85,13 +84,16 @@ public partial class MainWindow: Gtk.Window
         w1.Y = 400;
 
 
-        label3.Text = "butono location: " + w1.X.ToString() + " " + w1.Y.ToString();
+       
         
     }
 
 	protected void OnButton2Clicked(object sender, EventArgs e)
 	{
+		button2.Hide();
 		pirmas_dalinimas();
+		imti_3.Show();
+		Imti_viska.Show();
 	}
 
 	void pirmas_dalinimas()
@@ -143,20 +145,20 @@ public partial class MainWindow: Gtk.Window
 		{
 			for (int i = 0; i < pirmas.Ranka.Count; i++)
 			{
-				if ((((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y != 515)&&(i<8))
+				if ((((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y != 720)&&(i<8))
 				{
 					((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y += 20; 
 				}
-				else if ((((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y != 600) && (i >= 8))  //cia gryba pjaun
+				else if ((((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y != 800) && (i >= 8))  //cia gryba pjaun
 				{
 					((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y += 20;
 				}
 			}
 			if (zaidzia_uzverstom[1]==true)
 			{
-				if (((Gtk.Fixed.FixedChild)(fixed1[pirmouzv1])).Y != 400){((Gtk.Fixed.FixedChild)(fixed1[pirmouzv1])).Y += 20;}
-				if (((Gtk.Fixed.FixedChild)(fixed1[pirmouzv2])).Y != 400) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv2])).Y += 20; }
-				if (((Gtk.Fixed.FixedChild)(fixed1[pirmouzv3])).Y != 400) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv3])).Y += 20; }
+				if (((Gtk.Fixed.FixedChild)(fixed1[pirmouzv1])).Y != 580){((Gtk.Fixed.FixedChild)(fixed1[pirmouzv1])).Y += 20;}
+				if (((Gtk.Fixed.FixedChild)(fixed1[pirmouzv2])).Y != 580) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv2])).Y += 20; }
+				if (((Gtk.Fixed.FixedChild)(fixed1[pirmouzv3])).Y != 580) { ((Gtk.Fixed.FixedChild)(fixed1[pirmouzv3])).Y += 20; }
 
 			}
 					
@@ -295,7 +297,6 @@ public partial class MainWindow: Gtk.Window
 	{
 		if (kieno_eile == 1)
 		{
-
 			pirmas.imti_viska(ant_stalo);
 			refresh(kieno_eile);
 		}
