@@ -13,7 +13,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 public partial class MainWindow: Gtk.Window
 {
     
-    Gtk.Fixed.FixedChild w1;
+   
 	int kuri = 0, kieno_eile = 1, einama = 0,pries,po; //einama - tai ta kuri pasirinkta, bet nepadeta
 	bool[] zaidzia_uzverstom;
     cardgame.Kalade Kalade = new cardgame.Kalade();
@@ -80,8 +80,7 @@ public partial class MainWindow: Gtk.Window
 		//image2.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.42.bmp");
 
 		//image2.Pixbuf = trecias.Ranka[2].pav.Pixbuf;
-        w1.X = 400;
-        w1.Y = 400;
+
 
 
        
@@ -134,7 +133,11 @@ public partial class MainWindow: Gtk.Window
 			trec[i].Pixbuf = trecias.Ranka[i].pav.Pixbuf;
 			ketv[i].Pixbuf = ketvirtas.Ranka[i].pav.Pixbuf;*/
 			pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf;
-			antr[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+			//antr[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
+			antr[i].Pixbuf = antras.Ranka[i].pav.Pixbuf;
+			antrouzv1.Pixbuf = antras.uzverstos[0].pav.Pixbuf;
+			antrouzv2.Pixbuf = antras.uzverstos[1].pav.Pixbuf;
+			antrouzv3.Pixbuf = antras.uzverstos[2].pav.Pixbuf;
 			trec[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
 			ketv[i].Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.nugara.png");
 		}
@@ -184,13 +187,28 @@ public partial class MainWindow: Gtk.Window
 			if (pirmas.uzverstos[2] == null) { pirmouzv3.Pixbuf = null; }
 			for (int i = 0; i < pirmas.Ranka.Count; i++)
 			{
-				pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf; 
+				pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf;
 
 			}
 			for (int i = pirmas.Ranka.Count; i < 15; i++)
 			{
 				pir[i].Pixbuf = null;
 			}
+		}
+		else if (kurio == 2)
+		{
+			for (int i = 0; i < antras.Ranka.Count; i++)
+			{
+				antr[i].Pixbuf = antras.Ranka[i].pav.Pixbuf;
+
+			}
+			for (int i = antras.Ranka.Count; i < 15; i++)
+			{
+				antr[i].Pixbuf = null;
+			}
+			MessageDialog md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, antras.Ranka.Count.ToString());
+			md.Run();
+			md.Destroy();
 		}
 
 
@@ -277,9 +295,181 @@ public partial class MainWindow: Gtk.Window
 					zaidzia_uzverstom[kieno_eile] = true;
 				}
 				refresh(kieno_eile);
-				//if (pries != po) { kuri = 1; kieno_eile++;}
+				if (pries != po) { kuri = 1; kieno_eile++; AI();}
 
 			}
+		}
+
+	}
+	void AI()
+	{
+		
+		if (kieno_eile == 2)
+		{
+			bool padejo = false;
+			if (zaidzia_uzverstom[kieno_eile] == true)
+			{
+				antras.paimti_uzversta(0);
+				if ((antras.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte)|| (antras.Ranka[0].verte == 10) || (antras.Ranka[0].verte == 2))
+				{
+					antras.Deti_viena_korta(antras.Ranka[0], ant_stalo, Kalade);
+					padejo = true;
+
+				}
+			}
+			else
+			{
+				for (int i = 0; i < antras.Ranka.Count; i++)
+				{
+					if (ant_stalo.Zaidziamos.Count == 0)
+					{
+						antras.Deti_viena_korta(antras.Ranka[i], ant_stalo, Kalade);
+						padejo = true;
+						Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
+						break;
+					}
+					else if ((antras.Ranka[i].verte >= ant_stalo.Zaidziamos.Last().verte)||(antras.Ranka[i].verte==10)||(antras.Ranka[i].verte==2))
+					{
+						antras.Deti_viena_korta(antras.Ranka[i], ant_stalo, Kalade);
+						padejo = true;
+						Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
+						break;
+					}
+
+				}
+			}
+			if ((ant_stalo.Zaidziamos.Count > 3)&&(padejo==false))
+			{ 
+				antras.Imti_3(ant_stalo); 
+			}
+			else if (padejo==false)
+			{
+				antras.imti_viska(ant_stalo);
+			}
+			antras.paimti_atverstas(Kalade);
+			if ((antras.atverstos == null) && (antras.Ranka.Count == 0))
+			{
+				zaidzia_uzverstom[kieno_eile] = true;
+			}
+			refresh(2);
+			kieno_eile = 3;
+			AI();
+		} 
+		else if (kieno_eile == 3)
+		{
+			bool padejo = false;
+			if (zaidzia_uzverstom[kieno_eile] == true)
+			{
+				trecias.paimti_uzversta(0);
+				if ((trecias.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte) || (trecias.Ranka[0].verte == 10) || (trecias.Ranka[0].verte == 2))
+				{
+					trecias.Deti_viena_korta(trecias.Ranka[0], ant_stalo, Kalade);
+					padejo = true;
+
+				}
+			}
+			else
+			{
+				for (int i = 0; i < trecias.Ranka.Count; i++)
+				{
+					if (ant_stalo.Zaidziamos.Count == 0)
+					{
+						trecias.Deti_viena_korta(trecias.Ranka[i], ant_stalo, Kalade);
+						padejo = true;
+						Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
+						break;
+					}
+					else if ((trecias.Ranka[i].verte >= ant_stalo.Zaidziamos.Last().verte) || (trecias.Ranka[i].verte == 10) || (trecias.Ranka[i].verte == 2))
+					{
+						trecias.Deti_viena_korta(trecias.Ranka[i], ant_stalo, Kalade);
+						padejo = true;
+						Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
+						break;
+					}
+
+				}
+			}
+			if ((ant_stalo.Zaidziamos.Count > 3) && (padejo == false))
+			{
+				trecias.Imti_3(ant_stalo);
+			}
+			else if (padejo == false)
+			{
+				trecias.imti_viska(ant_stalo);
+			}
+			trecias.paimti_atverstas(Kalade);
+			if ((trecias.atverstos == null) && (trecias.Ranka.Count == 0))
+			{
+				zaidzia_uzverstom[kieno_eile] = true;
+			}
+			refresh(3);
+			kieno_eile =4;
+			//AI();
+		}
+		else if (kieno_eile == 4)
+		{
+			MessageDialog md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "l");
+			md.Run();
+			md.Destroy();
+			bool padejo = false;
+			if (zaidzia_uzverstom[kieno_eile] == true)
+			{
+				 md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "l");
+				md.Run();
+				md.Destroy();
+				ketvirtas.paimti_uzversta(0);
+				if ((ketvirtas.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte) || (ketvirtas.Ranka[0].verte == 10) || (ketvirtas.Ranka[0].verte == 2))
+				{
+					ketvirtas.Deti_viena_korta(ketvirtas.Ranka[0], ant_stalo, Kalade);
+					padejo = true;
+
+				}
+			}
+			else
+			{
+				 md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "l");
+				md.Run();
+				md.Destroy();
+				for (int i = 0; i < ketvirtas.Ranka.Count; i++)
+				{
+					if (ant_stalo.Zaidziamos.Count == 0)
+					{
+						ketvirtas.Deti_viena_korta(ketvirtas.Ranka[i], ant_stalo, Kalade);
+						padejo = true;
+						Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
+						break;
+					}
+					else if ((ketvirtas.Ranka[i].verte >= ant_stalo.Zaidziamos.Last().verte) || (ketvirtas.Ranka[i].verte == 10) || (ketvirtas.Ranka[i].verte == 2))
+					{
+						 md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "l");
+						md.Run();
+						md.Destroy();
+						ketvirtas.Deti_viena_korta(ketvirtas.Ranka[i], ant_stalo, Kalade);
+						padejo = true;
+						Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
+						break;
+					}
+
+				}
+			}
+			 md = new MessageDialog(this, DialogFlags.DestroyWithParent, MessageType.Info, ButtonsType.Ok, "l");
+			md.Run();
+			md.Destroy();
+			if ((ant_stalo.Zaidziamos.Count > 3) && (padejo == false))
+			{
+				ketvirtas.Imti_3(ant_stalo);
+			}
+			else if (padejo == false)
+			{
+				ketvirtas.imti_viska(ant_stalo);
+			}
+			ketvirtas.paimti_atverstas(Kalade);
+			if ((ketvirtas.atverstos == null) && (ketvirtas.Ranka.Count == 0))
+			{
+				zaidzia_uzverstom[kieno_eile] = true;
+			}
+			refresh(4);
+			kieno_eile = 1;
 		}
 
 	}
@@ -288,17 +478,26 @@ public partial class MainWindow: Gtk.Window
 	{
 		if (kieno_eile == 1)
 		{
-			pirmas.Imti_3(ant_stalo);
-			refresh(kieno_eile);
+			if (pirmas.Imti_3(ant_stalo))
+			{
+				refresh(kieno_eile);
+				kieno_eile++;
+				AI();
+			}
 		}
 	}
 
 	protected void OnImtiViskaClicked(object sender, EventArgs e)
 	{
+		pirmas.Imti_3(ant_stalo);
+		refresh(kieno_eile);
+
 		if (kieno_eile == 1)
 		{
 			pirmas.imti_viska(ant_stalo);
 			refresh(kieno_eile);
+			kieno_eile++;
+			AI();
 		}
 	}
 

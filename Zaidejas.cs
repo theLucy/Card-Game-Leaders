@@ -46,13 +46,15 @@ namespace cardgame
 			}
         }
 
-        public void paimti_atverstas(Kalade kalade)
+        public bool paimti_atverstas(Kalade kalade)
         {
 			if ((atverstos!=null)&&(Ranka.Count() == 0) && (kalade.Kortos.Count() == 0))
             {
                 Ranka.AddRange(atverstos);
                 atverstos = null;
+				return true;
             }
+			return false;
         }
 
         public void paimti_uzversta(int einama)
@@ -68,7 +70,7 @@ namespace cardgame
 			}
         }
 
-        public void Imti_3(Stalas stalas)
+        public bool Imti_3(Stalas stalas)
         {
 			if (stalas.Zaidziamos.Count > 2)
 			{
@@ -76,9 +78,11 @@ namespace cardgame
 				{
 					Ranka.Add(stalas.Zaidziamos.Last());
 					stalas.Zaidziamos.RemoveAt(stalas.Zaidziamos.Count - 1);
+
 				}
+				return true;
 			}
-                
+			return false;  
         }
         public void imti_viska(Stalas stalas)
         {
