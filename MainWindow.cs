@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using cardgame;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public partial class MainWindow: Gtk.Window
 {
@@ -298,5 +299,42 @@ public partial class MainWindow: Gtk.Window
 			pirmas.imti_viska(ant_stalo);
 			refresh(kieno_eile);
 		}
+	}
+
+
+
+
+	/* Issaugojimo i faila metodai
+	 * Pvz:
+	 * 	int[] mas = new int[] { 1, 5, 4,3 ,2 , 1};
+	 *  Serialize(mas, "mas.bin");
+	 *  int[] mas2 = (int[])Deserialize("mas.bin");	 
+	 */
+
+	public void Serialize(object t, string path)
+	{
+		using (Stream stream = File.Open(path, FileMode.Create))
+		{
+			BinaryFormatter binaryFormatter = new BinaryFormatter();
+			binaryFormatter.Serialize(stream, t);
+		}
+	}
+
+	public object Deserialize(string path)
+	{
+		object result;
+		if (!File.Exists(path))
+		{
+			result = null;
+		}
+		else
+		{
+			using (Stream stream = File.Open(path, FileMode.Open))
+			{
+				BinaryFormatter binaryFormatter = new BinaryFormatter();
+				result = binaryFormatter.Deserialize(stream);
+			}
+		}
+		return result;
 	}
 }

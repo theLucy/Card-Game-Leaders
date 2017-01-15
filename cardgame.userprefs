@@ -10,8 +10,7 @@
       <File FileName="Kalade.cs" Line="26" Column="32" />
       <File FileName="Korta.cs" Line="4" Column="1" />
       <File FileName="Garsas.cs" Line="52" Column="10" />
-      <File FileName="MainWindow.cs" Line="261" Column="68" />
-      <File FileName="Zaidejas.cs" Line="6" Column="11" />
+      <File FileName="MainWindow.cs" Line="261" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>
