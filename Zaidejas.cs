@@ -48,7 +48,7 @@ namespace cardgame
 
         public bool paimti_atverstas(Kalade kalade)
         {
-			if ((atverstos!=null)&&(Ranka.Count() == 0) && (kalade.Kortos.Count() == 0))
+			if ((atverstos!=null) &&(Ranka.Count() == 0) && (kalade.Kortos.Count() == 0))
             {
                 Ranka.AddRange(atverstos);
                 atverstos = null;

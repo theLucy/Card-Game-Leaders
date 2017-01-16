@@ -17,7 +17,8 @@ public partial class MainWindow: Gtk.Window
    
 	int kuri = 0, kieno_eile = 1, einama = 0,pries,po,kiek_laimetoju=0; //einama - tai ta kuri pasirinkta, bet nepadeta
 	bool[] zaidzia_uzverstom;
-	bool[] kas_laimejo; 
+	bool[] kas_laimejo;
+	Korta temp;
     cardgame.Kalade Kalade = new cardgame.Kalade();
     cardgame.Zaidejas pirmas = new cardgame.Zaidejas();
     cardgame.Zaidejas antras = new cardgame.Zaidejas();
@@ -35,7 +36,6 @@ public partial class MainWindow: Gtk.Window
 
 	public MainWindow () : base (Gtk.WindowType.Toplevel)
 	{
-        //vietoj konteineriu uzmeciau fixed grida, kad butu galima su pixeliais dirbt;
 		Build ();
 		Imti_viska.Hide();
 		imti_3.Hide();
@@ -71,21 +71,10 @@ public partial class MainWindow: Gtk.Window
     protected void OnButton1Clicked(object sender, EventArgs e)
     {
 
-
-     
 		/*MessageDialog md = new MessageDialog (this, DialogFlags.DestroyWithParent,MessageType.Info,ButtonsType.Ok, "l");
         md.Run ();
         md.Destroy();*/
 
-
-
-		//image2.Pixbuf = Gdk.Pixbuf.LoadFromResource("cardgame.Resources.42.bmp");
-
-		//image2.Pixbuf = trecias.Ranka[2].pav.Pixbuf;
-
-
-
-       
         
     }
 
@@ -150,7 +139,7 @@ public partial class MainWindow: Gtk.Window
 				{
 					((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y += 20; 
 				}
-				else if ((((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y != 800) && (i >= 8))  //cia gryba pjaun
+				else if ((((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y != 800) && (i >= 8))  
 				{
 					((Gtk.Fixed.FixedChild)(fixed1[pir[i]])).Y += 20;
 				}
@@ -304,7 +293,6 @@ public partial class MainWindow: Gtk.Window
 	[GLib.ConnectBefore]
 	protected void KeyPress(object sender, KeyPressEventArgs args)
 	{
-		//Console.WriteLine(args.Event.Key);
 		if ((kieno_eile == 1)&&(kas_laimejo[kieno_eile-1]==false))
 		{
 
@@ -368,9 +356,10 @@ public partial class MainWindow: Gtk.Window
 			{
 				
 				pries = ant_stalo.Zaidziamos.Count;
-
+				if (!((pirmas.Ranka.Count - 1) < einama)) { temp = pirmas.Ranka[einama]; }
 				if ( !((pirmas.Ranka.Count - 1) < einama) && pirmas.Deti_viena_korta(pirmas.Ranka[einama], ant_stalo, Kalade))
 				{
+					
 					Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
 				}
 
@@ -384,7 +373,8 @@ public partial class MainWindow: Gtk.Window
 				}
 				kas_laimejo_pralaimejo(1);
 				refresh(kieno_eile);
-				if (pries != po) { kuri = 1; kieno_eile++; AI();}
+				if ((kas_laimejo[0]==false)&&(temp.verte == 10)) { ; }
+				else if (pries != po) { kuri = 1; kieno_eile++; AI();}
 
 			}
 		}
@@ -577,7 +567,7 @@ public partial class MainWindow: Gtk.Window
 			refresh(4);
 			kieno_eile = 1;
 		}
-		else if(kas_laimejo[4] == true) { kieno_eile = 1; }
+		else if(kas_laimejo[3] == true) { kieno_eile = 1; }
 		 if (kas_laimejo[0] == true) { kieno_eile = 2; AI(); }
 
 	}
