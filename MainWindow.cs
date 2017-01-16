@@ -172,7 +172,49 @@ public partial class MainWindow: Gtk.Window
 		if (ant_stalo.Zaidziamos.Count != 0) { zaidziamos.Pixbuf = ant_stalo.Zaidziamos.Last().pav.Pixbuf; }
 		else { zaidziamos.Pixbuf = null; }
 
-		if (kurio == 1)
+		if (kas_laimejo[0] == true) 
+		{
+			for (int i = 0; i < 6; i++)
+			{
+				pir[i].Pixbuf = null;
+			}
+			pirmouzv1.Pixbuf = null;
+			pirmouzv2.Pixbuf = null;
+			pirmouzv3.Pixbuf = null;
+		}
+		if (kas_laimejo[1] == true) 
+		{
+			for (int i = 0; i < 6; i++)
+			{
+				antr[i].Pixbuf = null;
+			}
+			antrouzv1.Pixbuf = null;
+			antrouzv2.Pixbuf = null;
+			antrouzv3.Pixbuf = null;
+		}
+		if (kas_laimejo[2] == true) 
+		{ 
+			for (int i = 0; i < 6; i++)
+			{
+				trec[i].Pixbuf = null;
+			}
+			treciouzv1.Pixbuf = null;
+			treciouzv2.Pixbuf = null;
+			treciouzv3.Pixbuf = null;
+
+		}
+		if (kas_laimejo[3] == true) 
+		{
+			for (int i = 0; i < 10; i++)
+			{
+				ketv[i].Pixbuf = null;
+			}
+			ketvirtouzv1.Pixbuf = null;
+			ketvirtouzv2.Pixbuf = null;
+			ketvirtouzv3.Pixbuf = null;
+		}
+
+		if ((kurio == 1)&&(kas_laimejo[kurio - 1] == false))
 		{
 			if (pirmas.atverstos == null)
 			{
@@ -188,12 +230,12 @@ public partial class MainWindow: Gtk.Window
 				pir[i].Pixbuf = pirmas.Ranka[i].pav.Pixbuf;
 
 			}
-			for (int i = pirmas.Ranka.Count; i < 15; i++)
+			for (int i = pirmas.Ranka.Count; i < 20; i++)
 			{
 				pir[i].Pixbuf = null;
 			}
 		}
-		else if (kurio == 2)
+		else if ((kurio == 2)&& (kas_laimejo[kurio - 1] == false))
 		{
 			if (antras.atverstos == null)
 			{
@@ -214,7 +256,7 @@ public partial class MainWindow: Gtk.Window
 				antr[i].Pixbuf = null;
 			}
 		}
-		else if (kurio == 3)
+		else if ((kurio == 3)&& (kas_laimejo[kurio - 1] == false))
 		{
 			if (trecias.atverstos == null)
 			{
@@ -235,7 +277,7 @@ public partial class MainWindow: Gtk.Window
 				trec[i].Pixbuf = null;
 			}
 		}
-		else if (kurio == 4)
+		else if ((kurio == 4)&& (kas_laimejo[kurio - 1] == false))
 		{
 			if (ketvirtas.atverstos == null)
 			{
@@ -340,8 +382,8 @@ public partial class MainWindow: Gtk.Window
 				{
 					zaidzia_uzverstom[kieno_eile-1] = true;
 				}
-				refresh(kieno_eile);
 				kas_laimejo_pralaimejo(1);
+				refresh(kieno_eile);
 				if (pries != po) { kuri = 1; kieno_eile++; AI();}
 
 			}
@@ -350,13 +392,13 @@ public partial class MainWindow: Gtk.Window
 	}
 	void AI()
 	{
-		
-		if ((kieno_eile == 2)&& (kas_laimejo[kieno_eile - 1]==false))
+
+		if ((kieno_eile == 2) && (kas_laimejo[kieno_eile - 1] == false))
 		{
 			bool padejo = false;
-			if (zaidzia_uzverstom[kieno_eile-1] == true)
+			if (zaidzia_uzverstom[kieno_eile - 1] == true)
 			{
-                antras.paimti_uzversta(0);
+				antras.paimti_uzversta(0);
 
 				if (ant_stalo.Zaidziamos.Count == 0)
 				{
@@ -383,7 +425,7 @@ public partial class MainWindow: Gtk.Window
 						Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
 						break;
 					}
-					else if ((antras.Ranka[i].verte >= ant_stalo.Zaidziamos.Last().verte)||(antras.Ranka[i].verte==10)||(antras.Ranka[i].verte==2))
+					else if ((antras.Ranka[i].verte >= ant_stalo.Zaidziamos.Last().verte) || (antras.Ranka[i].verte == 10) || (antras.Ranka[i].verte == 2))
 					{
 						antras.Deti_viena_korta(antras.Ranka[i], ant_stalo, Kalade);
 						padejo = true;
@@ -393,28 +435,30 @@ public partial class MainWindow: Gtk.Window
 
 				}
 			}
-			if ((ant_stalo.Zaidziamos.Count > 3)&&(padejo==false))
-			{ 
-				antras.Imti_3(ant_stalo); 
+			if ((ant_stalo.Zaidziamos.Count > 3) && (padejo == false))
+			{
+				antras.Imti_3(ant_stalo);
 			}
-			else if (padejo==false)
+			else if (padejo == false)
 			{
 				antras.imti_viska(ant_stalo);
 			}
 			antras.paimti_atverstas(Kalade);
 			if ((antras.atverstos == null) && (antras.Ranka.Count == 0))
 			{
-				zaidzia_uzverstom[kieno_eile-1] = true;
+				zaidzia_uzverstom[kieno_eile - 1] = true;
 			}
+			kas_laimejo_pralaimejo(2);
 			refresh(2);
 			kieno_eile = 3;
-			kas_laimejo_pralaimejo(2);
-			AI();
-		} 
-		else if ((kieno_eile == 3)&& (kas_laimejo[kieno_eile - 1]==false))
+		}
+		else if (kas_laimejo[1] == true) { kieno_eile = 3;}
+
+
+		if ((kieno_eile == 3) && (kas_laimejo[kieno_eile - 1] == false))
 		{
 			bool padejo = false;
-			if (zaidzia_uzverstom[kieno_eile-1] == true)
+			if (zaidzia_uzverstom[kieno_eile - 1] == true)
 			{
 				trecias.paimti_uzversta(0);
 				if (ant_stalo.Zaidziamos.Count == 0)
@@ -423,15 +467,15 @@ public partial class MainWindow: Gtk.Window
 					padejo = true;
 					Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
 				}
-                
-                 else if ((trecias.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte) || (trecias.Ranka[0].verte == 10) || (trecias.Ranka[0].verte == 2))
-                    {
-                        trecias.Deti_viena_korta(trecias.Ranka[0], ant_stalo, Kalade);
-                        padejo = true;
+
+				else if ((trecias.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte) || (trecias.Ranka[0].verte == 10) || (trecias.Ranka[0].verte == 2))
+				{
+					trecias.Deti_viena_korta(trecias.Ranka[0], ant_stalo, Kalade);
+					padejo = true;
 					Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
 
-                    }
-                
+				}
+
 			}
 			else
 			{
@@ -465,33 +509,35 @@ public partial class MainWindow: Gtk.Window
 			trecias.paimti_atverstas(Kalade);
 			if ((trecias.atverstos == null) && (trecias.Ranka.Count == 0))
 			{
-				zaidzia_uzverstom[kieno_eile-1] = true;
+				zaidzia_uzverstom[kieno_eile - 1] = true;
 			}
-			refresh(3);
-			kieno_eile =4;
 			kas_laimejo_pralaimejo(3);
-			AI();
+			refresh(3);
+			kieno_eile = 4;
 		}
-		else if ((kieno_eile == 4)&&(kas_laimejo[kieno_eile-1]==false))
+		else if (kas_laimejo[2] == true) {kieno_eile = 4; }
+
+
+		if ((kieno_eile == 4) && (kas_laimejo[kieno_eile - 1] == false))
 		{
 			bool padejo = false;
-			if (zaidzia_uzverstom[kieno_eile-1] == true)
+			if (zaidzia_uzverstom[kieno_eile - 1] == true)
 			{
 				ketvirtas.paimti_uzversta(0);
-                if (ant_stalo.Zaidziamos.Count == 0)
+				if (ant_stalo.Zaidziamos.Count == 0)
 				{
 					ketvirtas.Deti_viena_korta(ketvirtas.Ranka[0], ant_stalo, Kalade);
 					padejo = true;
 					Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
 				}
-                  else  if ((ketvirtas.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte) || (ketvirtas.Ranka[0].verte == 10) || (ketvirtas.Ranka[0].verte == 2))
-                    {
-                        ketvirtas.Deti_viena_korta(ketvirtas.Ranka[0], ant_stalo, Kalade);
-                        padejo = true;
+				else if ((ketvirtas.Ranka[0].verte >= ant_stalo.Zaidziamos.Last().verte) || (ketvirtas.Ranka[0].verte == 10) || (ketvirtas.Ranka[0].verte == 2))
+				{
+					ketvirtas.Deti_viena_korta(ketvirtas.Ranka[0], ant_stalo, Kalade);
+					padejo = true;
 					Garsas.PlaySound(new FileStream("korta.wav", FileMode.Open, FileAccess.Read, FileShare.Read), SoundFlags.SND_ASYNC);
 
-                    }
-                
+				}
+
 			}
 			else
 			{
@@ -525,43 +571,46 @@ public partial class MainWindow: Gtk.Window
 			ketvirtas.paimti_atverstas(Kalade);
 			if ((ketvirtas.atverstos == null) && (ketvirtas.Ranka.Count == 0))
 			{
-				zaidzia_uzverstom[kieno_eile-1] = true;
+				zaidzia_uzverstom[kieno_eile - 1] = true;
 			}
+			kas_laimejo_pralaimejo(4);
 			refresh(4);
 			kieno_eile = 1;
-			kas_laimejo_pralaimejo(4);
 		}
+		else if(kas_laimejo[4] == true) { kieno_eile = 1; }
+		 if (kas_laimejo[0] == true) { kieno_eile = 2; AI(); }
 
 	}
-	void kas_laimejo_pralaimejo(int kieno_eile)
+	void kas_laimejo_pralaimejo(int kieno_eilee)
 	{
-		if (kieno_eile == 1)
+		
+		if (kieno_eilee == 1)
 		{
-			if (pirmas.uzverstos.Count() == 0)
+			if ((pirmas.uzverstos[0] == null)&&(pirmas.uzverstos[1] == null)&& (pirmas.uzverstos[2] == null)&&(pirmas.Ranka.Count==0))
 			{
 				kas_laimejo[kieno_eile-1] = true;
 				kiek_laimetoju++;
 			}
 		}
-		else if (kieno_eile == 2)
+		else if (kieno_eilee == 2)
 		{
-			if (antras.uzverstos.Count() == 0)
+			if ((antras.uzverstos[0]== null)&&(antras.uzverstos[1] == null)&& (antras.uzverstos[2] == null)&&(antras.Ranka.Count==0))
 			{
 				kas_laimejo[kieno_eile - 1] = true;
 				kiek_laimetoju++;
 			}
 		}
-		else if (kieno_eile == 3)
+		else if (kieno_eilee == 3)
 		{
-			if (trecias.uzverstos.Count() == 0)
+			if ((trecias.uzverstos[0] == null) && (trecias.uzverstos[1] == null) && (trecias.uzverstos[2] == null) && (trecias.Ranka.Count == 0))
 			{
 				kas_laimejo[kieno_eile - 1] = true;
 				kiek_laimetoju++;
 			}
 		}
-		else if (kieno_eile == 4)
+		else if (kieno_eilee == 4)
 		{
-			if (ketvirtas.uzverstos.Count() == 0)
+			if ((ketvirtas.uzverstos[0] == null) && (ketvirtas.uzverstos[1] == null) && (ketvirtas.uzverstos[2] == null) && (ketvirtas.Ranka.Count == 0))
 			{
 				kas_laimejo[kieno_eile - 1] = true;
 				kiek_laimetoju++;
